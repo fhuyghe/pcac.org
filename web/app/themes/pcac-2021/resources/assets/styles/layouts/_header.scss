@@ -1,7 +1,42 @@
-.banner .nav li {
-  @extend .nav-item;
+.banner{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: theme-color(white);
+
+  .nav{
+    background-color: theme-color(grey);
+  
+
+  li {
+    @extend .nav-item;
+
+    a {
+      @extend .nav-link;
+    }
+  }
+
+  .menu-item-has-children{
+    .sub-menu{
+      position: absolute;
+      visibility: hidden;
+      background-color: theme-color(white);
+      padding: $grid-gutter / 2;
+
+      &:hover{
+        visibility: visible;
+      }
+    }
+
+    &:hover{
+      .sub-menu{
+        visibility: visible;
+      }
+    }
+  }
+}
 }
 
-.banner .nav a {
-  @extend .nav-link;
-}
+

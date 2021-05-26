@@ -1,0 +1,32 @@
+.page{
+    // HOME
+    &.home{
+        section{
+            padding: $grid-gutter 0;
+        }
+
+        #top{
+            height: 500px;
+            padding: 0;
+            background-color: theme-color(primary);
+            color: theme-color(white);
+        }
+
+        #councils{
+            
+        }
+
+        #reports{
+
+        }
+
+        #newsletter{
+            background-color: theme-color(primary);
+            color: theme-color(white);
+            
+            .button{
+                border-color: theme-color(white);
+            }
+        }
+    }
+}

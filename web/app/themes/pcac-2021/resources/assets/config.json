@@ -10,7 +10,7 @@
   },
   "publicPath": "/app/themes/pcac-2021",
   "devUrl": "http://pcac.test",
-  "proxyUrl": "http://localhost:3000",
+  "proxyUrl": "http://localhost:3003",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",
