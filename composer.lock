@@ -4,8 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0299644b19a1fc006a2b1d227811a167",
+    "content-hash": "2ccb13d426d6335f9b26488b691b00b4",
     "packages": [
+        {
+            "name": "advanced-custom-fields/advanced-custom-fields-pro",
+            "version": "5.9.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.9.6"
+            },
+            "require": {
+                "composer/installers": "^1.4",
+                "ffraenz/private-composer-installer": "^5.0.1"
+            },
+            "type": "wordpress-plugin"
+        },
         {
             "name": "composer/installers",
             "version": "v1.11.0",
@@ -151,6 +164,93 @@
                 }
             ],
             "time": "2021-04-28T06:42:17+00:00"
+        },
+        {
+            "name": "deliciousbrains-plugin/wp-migrate-db-pro",
+            "version": "2.0.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro&version=2.0.2&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "deliciousbrains-plugin/wp-migrate-db-pro-media-files",
+            "version": "2.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro-media-files&version=2.0.1&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "ffraenz/private-composer-installer",
+            "version": "v5.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ffraenz/private-composer-installer.git",
+                "reference": "8655e3da4e8f99203f13ccca33b9ab953ad30a31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ffraenz/private-composer-installer/zipball/8655e3da4e8f99203f13ccca33b9ab953ad30a31",
+                "reference": "8655e3da4e8f99203f13ccca33b9ab953ad30a31",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": "^7.1 || ^8.0",
+                "vlucas/phpdotenv": "^4.1 || ^5.2"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0 || ^2.0",
+                "laminas/laminas-coding-standard": "^2.0",
+                "symfony/phpunit-bridge": "^5.1",
+                "symfony/process": "^4.4 || ^5.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "FFraenz\\PrivateComposerInstaller\\Plugin",
+                "plugin-modifies-downloads": true
+            },
+            "autoload": {
+                "psr-4": {
+                    "FFraenz\\PrivateComposerInstaller\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fränz Friederes",
+                    "email": "fraenz@frieder.es",
+                    "homepage": "https://fraenz.frieder.es"
+                }
+            ],
+            "description": "A composer install helper for private packages",
+            "keywords": [
+                "composer",
+                "env",
+                "plugin",
+                "private",
+                "wordpress",
+                "wp"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/ffraenz",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-10-30T09:35:33+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -408,7 +508,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/refs/tags/5.7.2"
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/refs/tags/5.7.2",
+                "reference": "5.7.2"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -612,7 +713,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -688,16 +789,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13"
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/5232de97ee3b75b0360528dae24e73db49566ab1",
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1",
                 "shasum": ""
             },
             "require": {
@@ -761,11 +862,11 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T16:49:33+00:00"
+            "time": "2021-01-22T09:19:47+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -918,6 +1019,60 @@
                 }
             ],
             "time": "2021-01-20T15:23:13+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/advanced-custom-fields",
+            "version": "5.9.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
+                "reference": "tags/5.9.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.9.6.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "16.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/16.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.16.3.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-fastest-cache",
+            "version": "0.9.1.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-fastest-cache/",
+                "reference": "tags/0.9.1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-fastest-cache.0.9.1.8.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-fastest-cache/"
         }
     ],
     "packages-dev": [
@@ -927,12 +1082,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "62148111d4ef79d664b0da42729ce5e0705ad4aa"
+                "reference": "80f32ef3cff7c3b5b650d8aa823437b43d5c5056"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/62148111d4ef79d664b0da42729ce5e0705ad4aa",
-                "reference": "62148111d4ef79d664b0da42729ce5e0705ad4aa",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/80f32ef3cff7c3b5b650d8aa823437b43d5c5056",
+                "reference": "80f32ef3cff7c3b5b650d8aa823437b43d5c5056",
                 "shasum": ""
             },
             "conflict": {
@@ -969,6 +1124,7 @@
                 "datadog/dd-trace": ">=0.30,<0.30.2",
                 "david-garcia/phpwhois": "<=4.3.1",
                 "derhansen/sf_event_mgt": "<4.3.1|>=5,<5.1.1",
+                "directmailteam/direct-mail": "<5.2.4",
                 "doctrine/annotations": ">=1,<1.2.7",
                 "doctrine/cache": ">=1,<1.3.2|>=1.4,<1.4.2",
                 "doctrine/common": ">=2,<2.4.3|>=2.5,<2.5.1",
@@ -1035,6 +1191,7 @@
                 "jsmitty12/phpwhois": "<5.1",
                 "kazist/phpwhois": "<=4.2.6",
                 "kitodo/presentation": "<3.1.2",
+                "klaviyo/magento2-extension": ">=1,<3",
                 "kreait/firebase-php": ">=3.2,<3.8.1",
                 "la-haute-societe/tcpdf": "<6.2.22",
                 "laravel/framework": "<6.20.26|>=7,<8.40",
@@ -1116,7 +1273,7 @@
                 "shopware/core": "<=6.3.5.2",
                 "shopware/platform": "<=6.3.5.2",
                 "shopware/production": "<=6.3.5.2",
-                "shopware/shopware": "<5.6.9",
+                "shopware/shopware": "<=5.6.9",
                 "silverstripe/admin": ">=1.0.3,<1.0.4|>=1.1,<1.1.1",
                 "silverstripe/assets": ">=1,<1.4.7|>=1.5,<1.5.2",
                 "silverstripe/cms": "<4.3.6|>=4.4,<4.4.4",
@@ -1215,6 +1372,7 @@
                 "yiisoft/yii2-gii": "<2.0.4",
                 "yiisoft/yii2-jui": "<2.0.4",
                 "yiisoft/yii2-redis": "<2.0.8",
+                "yoast-seo-for-typo3/yoast_seo": "<7.2.1",
                 "yourls/yourls": "<1.7.4",
                 "zendesk/zendesk_api_client_php": "<2.2.11",
                 "zendframework/zend-cache": ">=2.4,<2.4.8|>=2.5,<2.5.3",
@@ -1272,7 +1430,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-19T23:05:50+00:00"
+            "time": "2021-05-26T16:24:26+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
