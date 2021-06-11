@@ -6,10 +6,34 @@
         }
 
         #top{
-            height: 500px;
             padding: 0;
             background-color: theme-color(primary);
             color: theme-color(white);
+
+            .row{
+                height: 500px;
+            }
+
+            #mission{
+                padding: $grid-gutter;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+           
+                h1{
+                    font-family: 'Open Sans', sans-serif;
+                    text-align: center;
+                    margin-bottom: 0;
+                    font-size: 2em;
+                    max-width: 500px;
+                }
+            }
+
+            #illustration{
+                background-color: white;
+            }
+
         }
 
         #councils{

@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Slab&display=swap');
+
 body{
+    font-family: 'Open Sans', sans-serif;
     main.main{
         padding-top: 60px;
         min-height: 100vh;
@@ -11,4 +14,8 @@ a{
         padding: 10px 20px;
         border: 1px solid theme-color(primary);
     }
+}
+
+h1, h2, h3{
+    font-family: 'Roboto Slab', serif;
 }

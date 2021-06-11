@@ -6,6 +6,16 @@
   z-index: 99;
   background-color: theme-color(white);
 
+  .brand{
+    padding: 10px;
+    display: inline-block;
+
+    img{
+      width: 150px;
+      height: auto;
+    }
+  }  
+
   .nav{
     background-color: theme-color(grey);
   
