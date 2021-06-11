@@ -130,3 +130,92 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+
+
+
+
+
+//---Reports ::: reports ::: Report ::: report  --//
+function create_post_type_reports() {
+    register_post_type( 'reports',
+        array(
+            'labels' => array(
+                'name' => __( 'Reports' ),
+                'singular_name' => __( 'Report' ),
+                'singular_label' => __( 'Report' ),
+                'all_items' => __('Reports'),
+                'add_new_item' => __('Add new Report'),
+                'edit_item' => __('Edit Report')
+            ),
+        'public' => true,
+        'has_archive' => true,
+        'capability_type' => 'post',
+        'hierarchical' => true,
+        'query_var' => true,
+        'menu_position' => 2,
+        'menu_icon' => 'dashicons-clipboard',
+        'rewrite' => array('slug' => 'report'),
+        'supports' => array('title','editor','thumbnail', 'excerpt')
+        )
+    );
+}
+add_action( 'init', __NAMESPACE__ . '\\create_post_type_reports' );
+register_taxonomy("reports_type", array("reports"), array("hierarchical" => true, "label" => "Reports Type", "singular_label" => "Reports Type",'query_var' => true, "rewrite" => true));
+
+
+function custom_taxonomy_blog_category() {
+    $labels = array(
+        'name' => 'Blog Categories',
+        'singular_name' => 'Category',
+        'menu_name' => 'Blog Categories',
+        'all_items' => 'All Categories',
+        'parent_item' => 'Parent Category',
+        'parent_item_colon' => 'Parent Category:',
+        'new_item_name' => 'New Category Name',
+        'add_new_item' => 'Add New Category',
+        'edit_item' => 'Edit Category',
+        'update_item' => 'Update Category',
+        'separate_items_with_commas' => 'Separate Categories with commas',
+        'search_items' => 'Search Categories',
+        'add_or_remove_items' => 'Add or remove Category',
+        'choose_from_most_used' => 'Choose from the most used Categories',
+        'not_found' => 'Not Found',
+    );
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'public' => true,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'show_in_nav_menus' => true,
+        'show_tagcloud' => true,
+        'query_var' => 'blog_category',
+        'rewrite'           => array( 'slug' => 'blog/category' ),
+    );
+    register_taxonomy('blog_category', array('post'), $args);
+}
+// Hook into the 'init' action
+add_action('init', __NAMESPACE__ . '\\custom_taxonomy_blog_category', 0);
+
+
+function custom_taxonomy_councils() {
+    $labels = array(
+        'name' => 'Councils',
+        'singular_name' => 'Council',
+        'menu_name' => 'Councils'
+    );
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'public' => true,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'show_in_nav_menus' => true,
+        'show_tagcloud' => true,
+        'query_var' => 'council',
+    );
+    register_taxonomy('council', array('post', 'reports', 'council_statements'), $args);
+}
+// Hook into the 'init' action
+add_action('init', __NAMESPACE__ . '\\custom_taxonomy_councils', 0);
