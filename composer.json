@@ -71,7 +71,7 @@
     "wpackagist-plugin/wordpress-seo":"^16.2",
     "wpackagist-plugin/ajax-load-more":"5.4.5",
     "13milliseconds/ajax-load-more-pro": "dev-master",
-    "wpackagist-plugin/convert-post-types":"1.4"
+    "wpackagist-plugin/the-events-calendar":"5.7.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6.0",

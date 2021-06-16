@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
+use WP_Query;
 
 class FrontPage extends Controller
 {
@@ -15,5 +16,14 @@ class FrontPage extends Controller
         $data['events'] = get_field('events');
 
         return $data;
+    }
+
+    public function events(){
+        $args = array(
+            'post_type' => 'tribe_events',
+	    	'posts_per_page' => 5
+	    );
+	    $the_query = new WP_Query( $args );
+	    return $the_query->posts;
     }
 }

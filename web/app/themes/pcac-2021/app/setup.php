@@ -136,9 +136,6 @@ add_filter( 'excerpt_length', function($length) {
     return 20;
 } );
 
-
-
-
 //---Reports ::: reports ::: Report ::: report  --//
 function create_post_type_reports() {
     register_post_type( 'reports',

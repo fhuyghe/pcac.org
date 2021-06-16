@@ -48,6 +48,21 @@
             }
         }
 
+        #calendar{
+            .events{
+                .event{
+                    width: 100%;
+                    display: flex;
+                    padding: $grid-gutter / 2;
+                    justify-content: space-between;
+
+                    &:nth-child(2n){
+                        background: theme-color(grey);
+                    }
+                }
+            }
+        }
+
         #reports{
 
         }

@@ -67,10 +67,24 @@
                 </div>
             </div>
         </header>
-    <div class="row">
-        <div class="col-md-4">
-            @include('partials/post-block')
+    <div class="events">
+        @foreach ($events as $event)
+        <div class="event">
+            @php $start = strtotime(get_post_meta($event->ID, '_EventStartDate')[0]) @endphp
+            <div class="date">
+                {{ date("F j", $start) }}
+            </div>
+            <div class="time">
+                {{ date("g:i a", $start) }}
+            </div>
+            <div class="subject">
+                {{ $event->post_title }}
+            </div>
+            <div class="link">
+                <a href="{{ the_permalink($event->ID) }}">Learn More</a>
+            </div>
         </div>
+        @endforeach
     </div>
     </div>
 </section>
