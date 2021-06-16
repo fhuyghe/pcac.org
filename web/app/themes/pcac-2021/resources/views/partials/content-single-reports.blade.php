@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <a href="reports">< Back to All</a>
+          <a href="/reports">< Back to All</a>
           <h1 class="entry-title">{!! get_the_title() !!}</h1>
           <p>{{ the_excerpt() }}</p>
         </div>
