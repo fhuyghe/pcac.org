@@ -1,0 +1,31 @@
+.single{
+    article{
+        header{
+            background: theme-color(grey);
+            min-height: 30vh;
+            padding: $grid-gutter;
+        }
+
+        .entry-content{
+            padding: $grid-gutter 0;
+        }
+    }
+
+    &.single-reports{
+        article{
+            header{
+                position: relative;
+
+                .thumbnail{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 50%;
+                    height: 100%;
+                    overflow: hidden;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
