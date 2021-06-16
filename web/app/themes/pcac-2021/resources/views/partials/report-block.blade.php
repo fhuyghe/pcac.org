@@ -1,13 +1,16 @@
-<div class="post-block">
+<div class="post-block report">
     <div class="date">
-        Date
+        {{the_date('Y')}}
     </div>
     <div class="thumbnail">
-        Image
+        {{ the_post_thumbnail('medium') }}
     </div>
-    <p>Excerpt</p>
+    <h4>{{ the_title() }}</h4>
     <footer>
-        <a class="button">Read Online</a>
-        <a class="button">PDF</a>
+        <a class="button" href="{{ the_permalink() }}">Read Online</a>
+        @php $pdf = get_field('pdf_link') @endphp
+        @if($pdf)
+        <a class="button" href="{{ $pdf }}" target="_blank">PDF</a>
+        @endif
     </footer>
 </div>

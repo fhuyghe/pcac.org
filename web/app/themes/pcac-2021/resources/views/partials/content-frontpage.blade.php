@@ -1,3 +1,5 @@
+@php global $post @endphp
+
 {{-- TOP --}}
 <section id="top">
     <div class="row">
@@ -96,9 +98,13 @@
             <h2>Reports</h2>
         </header>
     <div class="row">
-        <div class="col-md-4">
-            @include('partials/report-block')
-        </div>
+        @foreach ($reports as $post)
+            @php setup_postdata($post) @endphp
+            <div class="col-md-4">
+                @include('partials/report-block')
+            </div>
+            @php wp_reset_postdata() @endphp
+        @endforeach
     </div>
     </div>
 </section>

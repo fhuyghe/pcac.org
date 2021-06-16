@@ -113,4 +113,11 @@
     .category{
         margin-bottom: 10px;
     }
+
+    &.report{
+        .thumbnail,
+        .thumbnail img{
+            height: 400px;
+        }
+    }
 }
