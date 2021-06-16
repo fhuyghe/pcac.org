@@ -1,3 +1,4 @@
+<div class="col-md-4">
 <div class="post-block report">
     <div class="date">
         {{the_date('Y')}}
@@ -13,4 +14,5 @@
         <a class="button" href="{{ $pdf }}" target="_blank">PDF</a>
         @endif
     </footer>
+</div>
 </div>

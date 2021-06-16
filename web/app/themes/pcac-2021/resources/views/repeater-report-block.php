@@ -1,0 +1,1 @@
+<?php echo \App\template('partials.report-block'); ?>

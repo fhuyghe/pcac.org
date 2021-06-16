@@ -100,9 +100,7 @@
     <div class="row">
         @foreach ($reports as $post)
             @php setup_postdata($post) @endphp
-            <div class="col-md-4">
                 @include('partials/report-block')
-            </div>
             @php wp_reset_postdata() @endphp
         @endforeach
     </div>
