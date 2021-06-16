@@ -4,11 +4,8 @@
         <div class="col-md-6" id="mission">
             <h1>{!! $data['top_banner']['mission_statement'] !!}</h1>
         </div>
-        <div class="col-md-6" id="illustration">
-            @php $topImage = $data['top_banner']['illustration'] @endphp
-            @if($topImage)
-                <img src="{{ $topImage['url'] }}" alt="{{ $topImage['alt'] }}" />
-            @endif
+        @php $topImage = $data['top_banner']['illustration'] @endphp
+        <div class="col-md-6" id="illustration" style="background-image: url({{ $topImage['sizes']['large'] }})">
         </div>
     </div>
 </section>
@@ -34,8 +31,6 @@
             <h2>Commentary</h2>
         </header>
         {!! do_shortcode('[ajax_load_more_filters id="categories" target="ajax_load_more"]') !!}
-    <div class="row">
-        <div class="col-md-4">
             <div class="load-more">
                 @php
                 $args = array(
@@ -47,15 +42,14 @@
                     'button_label' => 'Show More Posts',
                     'button_loading_label' => 'Loading...',
                     'placeholder' => 'false',
+                    'theme_repeater' => 'repeater-post-block.php',
                     'scroll' => 'false'
                 );	
                 if(function_exists('alm_render')){
                     alm_render($args);
                 }
                 @endphp
-            </div>
         </div>
-    </div>
     </div>
 </section>
 

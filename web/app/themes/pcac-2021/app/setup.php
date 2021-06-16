@@ -131,7 +131,10 @@ add_action('after_setup_theme', function () {
     });
 });
 
-
+// Change excerpt length
+add_filter( 'excerpt_length', function($length) {
+    return 20;
+} );
 
 
 

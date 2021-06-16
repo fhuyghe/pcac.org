@@ -16,6 +16,36 @@ a{
     }
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
     font-family: 'Roboto Slab', serif;
+}
+
+h2{
+    margin-bottom: $grid-gutter;
+}
+
+h4{
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+.council-pcac{
+ .themed{
+     color: theme-color(purple);
+ }   
+}
+.council-lirrcc{
+ .themed{
+     color: theme-color(lirrcc);
+ }   
+}
+.council-mnrcc{
+ .themed{
+     color: theme-color(mnrcc);
+ }   
+}
+.council-nyctrc{
+ .themed{
+     color: theme-color(nyctrc);
+ }   
 }
