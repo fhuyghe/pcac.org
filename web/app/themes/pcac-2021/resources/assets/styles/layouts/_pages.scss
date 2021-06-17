@@ -74,6 +74,20 @@
             }
         }
     }
+
+    &.about{
+        #top{
+            background-color: theme-color(purple);
+            color: theme-color(white);
+            min-height: 30vh;
+            display: flex;
+            align-items: center;
+            
+            .row{
+                align-items: center;
+            }
+        }
+    }
 }
 
 
