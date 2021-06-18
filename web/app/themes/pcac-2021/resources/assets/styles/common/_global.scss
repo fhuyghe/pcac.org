@@ -58,3 +58,14 @@ h4{
 .alm-reveal{
     @extend .row;
 }
+
+.alm-btn-wrap{
+    margin-top: $grid-gutter;
+    
+    button{
+        border: 0;
+        background: theme-color(purple);
+        color: theme-color(white);
+        padding: 10px 20px;
+    }
+}

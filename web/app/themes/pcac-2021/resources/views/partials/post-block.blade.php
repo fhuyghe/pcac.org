@@ -27,6 +27,7 @@ if(!$category) {
             {{ the_date() }}
         </div>
     </div>
+    <a href="{{ the_permalink() }}">
     <div class="thumbnail">
         @php $thumbnail = get_the_post_thumbnail( null, 'medium' ) @endphp
         @if($thumbnail)
@@ -35,10 +36,11 @@ if(!$category) {
             No Thumbnail
         @endif
     </div>
+    </a>
     <div class="category themed">
         {{ $category->name }}
     </div>
-    <h4>{{ the_title() }}</h4>
-    <p>{{ the_excerpt() }}</p>
+    <h4><a href="{{ the_permalink() }}">{{ the_title() }}</a></h4>
+    {{ the_excerpt() }}
 </div>
 </div>
