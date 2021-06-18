@@ -5,6 +5,10 @@
   width: 100%;
   z-index: 99;
   background-color: theme-color(white);
+  
+  .top-banner{
+    background-color: theme-color(white);
+  }
 
   .brand{
     padding: 10px;
@@ -49,4 +53,36 @@
 }
 }
 
+.nav-councils{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  background: theme-color(grey);
+  list-style: none;
+  max-width: 1200px;
+  transition: .25s;
+  transform: translateY(-100%);
+  z-index: -1;
+  
+  &.active{
+    transform: translateY(0);
+  }
+
+  li{
+    border-right: 1px solid theme-color(black);
+    padding: $grid-gutter / 2 $grid-gutter;
+
+    h2{
+      margin-bottom: 5px;
+    }
+
+    img{
+      margin-bottom: 5px;
+    }
+
+    &:last-child{
+      border-right: 0;
+    }
+  }
+}
 

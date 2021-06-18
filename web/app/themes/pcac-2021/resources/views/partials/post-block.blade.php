@@ -18,7 +18,7 @@ if(!$category) {
 @endphp
 
 <div class="col-md-4">
-<div class="post-block council-{{ $council }}">
+<div class="post-block {{ $council }}">
     <div class="top themed">
         <div class="council">
             {{ $council }}

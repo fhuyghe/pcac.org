@@ -34,22 +34,35 @@ h4{
     line-height: 1.3em;
 }
 
-.council-pcac{
+.pcac,
+.lirrcc, 
+.mnrcc,
+.nyctrc{
+    p strong{
+        font-weight: 400;
+    }
+}
+
+.pcac{
+    p strong,
  .themed{
      color: theme-color(purple);
  }   
 }
-.council-lirrcc{
- .themed{
-     color: theme-color(lirrcc);
- }   
+.lirrcc{
+    p strong,
+    .themed{
+        color: theme-color(lirrcc);
+    }   
 }
-.council-mnrcc{
- .themed{
-     color: theme-color(mnrcc);
- }   
+.mnrcc{
+    p strong,
+    .themed{
+        color: theme-color(mnrcc);
+    }   
 }
-.council-nyctrc{
+.nyctrc{
+    p strong,
  .themed{
      color: theme-color(nyctrc);
  }   
@@ -61,7 +74,7 @@ h4{
 
 .alm-btn-wrap{
     margin-top: $grid-gutter;
-    
+
     button{
         border: 0;
         background: theme-color(purple);
