@@ -1,12 +1,12 @@
-<div class="council-block">
+<div class="council-block {{ $post->post_name }}">
     <div class="logo">
-        <img src="" />
+        <img src="{{ get_field('logo', $post->ID)['sizes']['medium'] }}" />
     </div>
     <div class="description">
-        <p>{{ $council['description'] }}</p>
-        <a class="button" href="/council">Learn More</a>
+        {!! the_field('short_description', $post->ID) !!}
+        <a class="button" href="{{ the_permalink() }}">Learn More</a>
     </div>
     <div class="image">
-        <img src="" />
+        {{ the_post_thumbnail('medium') }}
     </div>
 </div>

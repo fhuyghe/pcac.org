@@ -19,7 +19,10 @@
     <div class="row">
         @foreach ($data['councils']['councils'] as $council)
             <div class="col-md-4">
+                @php $post = $council['council'] @endphp
+                @php setup_postdata($post) @endphp
                 @include('partials.council-block')
+                @php wp_reset_postdata() @endphp
             </div>
         @endforeach
     </div>
@@ -65,7 +68,7 @@
                 </div>
                 <div class="col-md-6">
                     Text
-                    <a class="button" href="/calendar">Calendar</a>
+                    <a class="button" href="/events">Calendar</a>
                 </div>
             </div>
         </header>

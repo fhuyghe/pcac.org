@@ -1,6 +1,8 @@
 @php 
 $council_term = get_the_terms($post, 'council');
-if($council_term[0]){
+$category = [];
+
+if($council_term && $council_term[0]){
    $council = $council_term[0]->slug;
 } else {
     $council = 'pcac';

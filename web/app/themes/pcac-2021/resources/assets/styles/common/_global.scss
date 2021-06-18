@@ -11,7 +11,7 @@ body{
 a{
     &.button{
         display: inline-block;
-        padding: 10px 20px;
+        padding: 5px 20px;
         border: 1px solid theme-color(primary);
     }
 }
@@ -43,30 +43,61 @@ h4{
     }
 }
 
-.pcac{
+
+$councils: 'pcac', 'lirrcc', 'mnrcc', 'nyctrc';
+
+@each $council in $councils {
+  .#{$council} {
     p strong,
- .themed{
-     color: theme-color(purple);
- }   
-}
-.lirrcc{
-    p strong,
+    .button,
     .themed{
-        color: theme-color(lirrcc);
+        color: theme-color($council);
+        border-color: theme-color($council);
     }   
+
+    #top{
+        background-color: theme-color($council);
+        color: theme-color(white);
+    }
+  }
 }
-.mnrcc{
-    p strong,
-    .themed{
-        color: theme-color(mnrcc);
-    }   
-}
-.nyctrc{
-    p strong,
- .themed{
-     color: theme-color(nyctrc);
- }   
-}
+
+// .pcac{
+//     p strong,
+//     .button,
+//     .themed{
+//      color: theme-color(purple);
+//      border-color: theme-color(purple);
+//  }   
+// }
+// .lirrcc{
+//     p strong,
+//     .button,
+//     .themed{
+//         color: theme-color(lirrcc);
+//         border-color: theme-color(lirrcc);
+//     }   
+
+//     #top{
+//         background-color: theme-color(lirrcc);
+//     }
+// }
+// .mnrcc{
+//     p strong,
+//     .button,
+//     .themed{
+//         color: theme-color(mnrcc);
+//         border-color: theme-color(mnrcc);
+//     }   
+// }
+// .nyctrc{
+//     p strong,
+//     .button,
+//     .themed{
+//      color: theme-color(nyctrc);
+//      border-color: theme-color(nyctrc);
+//  }   
+// }
 
 .alm-reveal{
     @extend .row;
