@@ -220,3 +220,23 @@ function custom_taxonomy_councils() {
 }
 // Hook into the 'init' action
 add_action('init', __NAMESPACE__ . '\\custom_taxonomy_councils', 0);
+
+//---Staff  --//
+function create_post_type_staff() {
+    register_post_type( 'staff',
+        array(
+            'labels' => array(
+                'name' => __( 'Staff' ),
+            ),
+        'public' => true,
+        'has_archive' => true,
+        'capability_type' => 'post',
+        'hierarchical' => true,
+        'query_var' => true,
+        'menu_position' => 3,
+        'menu_icon' => 'dashicons-universal-access',
+        'supports' => array('title','editor','thumbnail', 'excerpt')
+        )
+    );
+}
+add_action( 'init', __NAMESPACE__ . '\\create_post_type_staff' );
