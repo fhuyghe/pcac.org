@@ -29,3 +29,21 @@
         }
     }
 }
+
+.single-tribe_events{
+    #tribe-events-pg-template{
+        max-width: none;
+        padding: 0;
+        
+        #tribe-events{
+            padding: 0;
+        }
+    }
+
+    #top{
+        background-color: theme-color(grey);
+        padding: $grid-gutter 0;
+    }
+
+}
+

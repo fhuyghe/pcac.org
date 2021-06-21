@@ -89,3 +89,59 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+
+// Show templates to the Events Calendar
+add_filter('tribe_get_template_part_path', 'App\tribe_render_detault_blade', PHP_INT_MAX, 2);
+function tribe_render_detault_blade($file, $template) {
+    $theme_template = locate_template(["views/tribe-events/{$template}"]);
+
+    if ($theme_template) {
+
+        $data = collect(get_body_class())->reduce(function ($data, $class) use ($template) {
+            return apply_filters("sage/template/{$class}/data", $data, $template);
+        }, []);
+
+        echo template($theme_template, $data);
+
+        return get_stylesheet_directory().'/index.php';
+    }
+    return $file;
+}
+
+add_filter('tribe_get_current_template', function( $template ){
+    $theme_template = locate_template(["views/tribe-events/{$template}"]);
+
+    if ($theme_template)
+        return $theme_template;
+
+    return $template;
+}, PHP_INT_MAX, 2);
+
+add_filter('tribe_events_template', 'App\\tribe_add_blade_templates', PHP_INT_MAX, 2);
+function tribe_add_blade_templates($file, $template) {
+    $theme_template = locate_template(["views/tribe-events/{$template}"]);
+
+    if ($theme_template)
+        return $theme_template;
+
+    return $file;
+}
+
+add_action( 'tribe_events_before_view', function($file) {
+    ob_start();
+} );
+
+add_action( 'tribe_events_after_view', function($file) {
+    $html = ob_get_clean();
+
+    if(strpos($file, '.blade.php') !== false) {
+
+        $data = collect(get_body_class())->reduce(function ($data, $class) use ($file) {
+            return apply_filters("sage/template/{$class}/data", $data, $file);
+        }, []);
+
+        echo template($file, $data);
+
+    } else echo $html;
+} );
