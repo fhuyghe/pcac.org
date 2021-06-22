@@ -1,9 +1,20 @@
 .single{
     article{
         header{
+            position: relative;
             background: theme-color(grey);
             min-height: 30vh;
             padding: $grid-gutter;
+
+            .thumbnail{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 100%;
+                overflow: hidden;
+                object-fit: cover;
+            }
         }
 
         .entry-content{
@@ -11,21 +22,23 @@
         }
     }
 
-    &.single-reports{
+    &.single-staff{
         article{
-            header{
-                position: relative;
+            margin-top: $grid-gutter;
 
-                .thumbnail{
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    width: 50%;
-                    height: 100%;
-                    overflow: hidden;
-                    object-fit: cover;
+            .thumbnail{
+                margin-bottom: $grid-gutter;
+
+                img{
+                    max-width: 100%;
+                    height: auto;
                 }
             }
+        }
+
+        h6{
+            color: theme-color(pcac);
+            margin-bottom: $grid-gutter / 2;
         }
     }
 }

@@ -34,6 +34,10 @@ h4{
     line-height: 1.3em;
 }
 
+h6{
+    letter-spacing: .03em;
+}
+
 .pcac,
 .lirrcc, 
 .mnrcc,
@@ -59,45 +63,18 @@ $councils: 'pcac', 'lirrcc', 'mnrcc', 'nyctrc';
         background-color: theme-color($council);
         color: theme-color(white);
     }
+
+    .logo{
+        color: theme-color($council)!important;
+        
+        svg{
+            .circle{
+                fill: theme-color($council)!important;
+            }
+        }
+    }
   }
 }
-
-// .pcac{
-//     p strong,
-//     .button,
-//     .themed{
-//      color: theme-color(purple);
-//      border-color: theme-color(purple);
-//  }   
-// }
-// .lirrcc{
-//     p strong,
-//     .button,
-//     .themed{
-//         color: theme-color(lirrcc);
-//         border-color: theme-color(lirrcc);
-//     }   
-
-//     #top{
-//         background-color: theme-color(lirrcc);
-//     }
-// }
-// .mnrcc{
-//     p strong,
-//     .button,
-//     .themed{
-//         color: theme-color(mnrcc);
-//         border-color: theme-color(mnrcc);
-//     }   
-// }
-// .nyctrc{
-//     p strong,
-//     .button,
-//     .themed{
-//      color: theme-color(nyctrc);
-//      border-color: theme-color(nyctrc);
-//  }   
-// }
 
 .alm-reveal{
     @extend .row;

@@ -1,3 +1,5 @@
+@php global $post @endphp
+
 <section id="top">
     <div class="container">
         <div class="row">
@@ -57,9 +59,11 @@
     <div class="container">
         <h2>PCAC Staff</h2>
         <div class="row">
-            <div class="col-md-4">
-
-            </div>
+                @foreach ($staff as $post)
+                    @php setup_postdata($post) @endphp
+                    @include('partials.staff-block')
+                    @php wp_reset_postdata() @endphp
+                @endforeach
         </div>
     </div>
 </section>

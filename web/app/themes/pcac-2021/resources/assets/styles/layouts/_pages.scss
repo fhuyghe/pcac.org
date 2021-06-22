@@ -1,14 +1,17 @@
 .page{
+    section{
+        padding: $grid-gutter 0;
+    }
+
     // HOME
     &.home{
-        section{
-            padding: $grid-gutter 0;
-        }
-
         #top{
-            padding: 0;
+            @extend .container;
+            padding: 0 25px;
             background-color: theme-color(primary);
             color: theme-color(white);
+            max-width: 100%;
+
 
             .row{
                 height: 500px;
@@ -40,6 +43,20 @@
 
         #councils{
             .council-block{
+                .logo{
+                    margin-bottom: $grid-gutter / 2;
+                    font-size: 50px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+
+                    svg{
+                        height: 50px;
+                        margin-right: 10px;
+                    }
+                }
+
                 .image{
                     margin-top: $grid-gutter / 2;
                 }
@@ -91,6 +108,14 @@
                 align-items: center;
             }
         }
+
+        #staff{
+            .staff-block{
+                h6{
+                    margin-bottom: $grid-gutter / 2;
+                }
+            }
+        }
     }
 
     &.commentary{
@@ -123,7 +148,7 @@
     &.template-council{
         section{
             margin-bottom: $grid-gutter;
-            
+
             header{
                 display: flex;
                 justify-content: space-between;
