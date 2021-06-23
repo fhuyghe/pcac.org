@@ -34,8 +34,13 @@
     <div class="container">
         <header>
             <h2>Commentary</h2>
+            <div class="filter">
+                {!! do_shortcode('[ajax_load_more_filters id="categories" target="ajax_load_more"]') !!}
+            </div>
+            <div class="button">
+                <a class="button" href="/commentary">Read All</a>
+            </div>
         </header>
-        {!! do_shortcode('[ajax_load_more_filters id="categories" target="ajax_load_more"]') !!}
             <div class="load-more">
                 @php
                 $args = array(
@@ -63,33 +68,43 @@
     <div class="container">
         <header>
             <div class="row">
-                <div class="col-md-6">
-                    <h2>Upcoming Events</h2>
+                <div class="col-md-6 col-lg-8">
+                    <h2>{{ $data['events']['title'] }}</h2>
                 </div>
-                <div class="col-md-6">
-                    Text
+                <div class="col-md-6 col-lg-4">
+                    <div class="description">
+                        {{ $data['events']['description'] }}
+                    </div>
                     <a class="button" href="/events">Calendar</a>
                 </div>
             </div>
         </header>
     <div class="events">
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Subject</th>
+                <th></th>
+            </tr>
         @foreach ($events as $event)
-        <div class="event">
+        <tr class="event">
             @php $start = strtotime(get_post_meta($event->ID, '_EventStartDate')[0]) @endphp
-            <div class="date">
+            <td class="date">
                 {{ date("F j", $start) }}
-            </div>
-            <div class="time">
+            </td>
+            <td class="time">
                 {{ date("g:i a", $start) }}
-            </div>
-            <div class="subject">
+            </td>
+            <td class="subject">
                 {{ $event->post_title }}
-            </div>
-            <div class="link">
-                <a href="{{ the_permalink($event->ID) }}">Learn More</a>
-            </div>
-        </div>
+            </td>
+            <td class="link">
+                <a href="{{ the_permalink($event->ID) }}">More Info</a>
+            </td>
+        </tr>
         @endforeach
+        </table>
     </div>
     </div>
 </section>
@@ -112,20 +127,25 @@
 
 {{-- Feature --}}
 <section id="feature">
+    @php 
+        $post = $data['feature']['item'];
+        setup_postdata($post); 
+    @endphp
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2>Feature Title</h2>
+                <h2>{{ the_title() }}</h2>
             </div>
             <div class="col-md-6">
-                <p>Text</p>
-                <a class="button">Explore</a>
+                {!! the_excerpt() !!}
+                <a class="button" href="{{ the_permalink() }}">Explore</a>
             </div>
         </div>
         <div class="thumbnail">
-            Image
+            <img src="{{ $data['feature']['image']['sizes']['large'] }}" />
         </div>
     </div>
+    @php wp_reset_postdata() @endphp
 </section>
 
 {{-- Twitter --}}
@@ -134,10 +154,6 @@
         <h2>Twitter Feed</h2>
         <div class="row" id="twitterFeed">
             @include('partials.latest-tweets')
-            {{-- <a class="twitter-timeline" 
-            data-tweet-limit="3"
-            data-chrome="noheader nofooter noborders noscrollbar transparent"
-            href="https://twitter.com/PCACriders?ref_src=twsrc%5Etfw">Tweets by PCACriders</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
         </div>
     </div>
 </section>
@@ -147,12 +163,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2>Join the conversation</h2>
+                <h2>{{ $data['social']['title'] }}</h2>
             </div>
             <div class="col-md-6">
-                <p>Text</p>
-                <a class="button">Facebook</a>
-                <a class="button">Twitter</a>
+                <p>{{ $data['social']['text'] }}</p>
+                @foreach ( $data['social']['links'] as $link)
+                <div class="link">
+                    <a class="button" href="{{ $link['url'] }}" target="_blank">{{ $link['text'] }}</a>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>

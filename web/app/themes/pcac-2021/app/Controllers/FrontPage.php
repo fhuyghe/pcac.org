@@ -14,6 +14,8 @@ class FrontPage extends Controller
         $data['top_banner'] = get_field('top_banner');
         $data['councils'] = get_field('councils');
         $data['events'] = get_field('events');
+        $data['feature'] = get_field('feature');
+        $data['social'] = get_field('social');
 
         return $data;
     }

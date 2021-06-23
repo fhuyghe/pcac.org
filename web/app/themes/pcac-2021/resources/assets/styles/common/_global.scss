@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Roboto+Slab&display=swap');
 
 body{
     font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+
     main.main{
         padding-top: 100px;
         min-height: 100vh;
@@ -13,6 +15,11 @@ a{
         display: inline-block;
         padding: 5px 20px;
         border: 1px solid theme-color(primary);
+    }
+
+    &:hover{
+        text-decoration: none;
+        color: theme-color(purple);
     }
 }
 
