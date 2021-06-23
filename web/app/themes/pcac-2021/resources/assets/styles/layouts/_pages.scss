@@ -83,7 +83,16 @@
         }
 
         #reports{
-
+            .container{
+                border-bottom: 2px solid theme-color(black);
+            }
+        }
+        
+        #feature{
+            .container{
+                border-bottom: 2px solid theme-color(black);
+                padding-bottom: $grid-gutter;
+            }
         }
 
         #newsletter{
@@ -92,6 +101,25 @@
             
             .button{
                 border-color: theme-color(white);
+            }
+        }
+
+        #twitterFeed{
+            .tweet{
+                @extend .col-md-4;
+                display: flex;
+                margin-bottom: $grid-gutter;
+                font-size: .9em;
+                color: theme-color(purple);
+
+                .icon{
+                    font-size: 30px;
+                    padding-right: 20px;
+                }
+
+                .date{
+                    margin-top: 10px;
+                }
             }
         }
     }

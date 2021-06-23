@@ -132,16 +132,12 @@
 <section id="twitter">
     <div class="container">
         <h2>Twitter Feed</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <p>Tweet</p>
-            </div>
-            <div class="col-md-4">
-                <p>Tweet</p>
-            </div>
-            <div class="col-md-4">
-                <p>Tweet</p>
-            </div>
+        <div class="row" id="twitterFeed">
+            @include('partials.latest-tweets')
+            {{-- <a class="twitter-timeline" 
+            data-tweet-limit="3"
+            data-chrome="noheader nofooter noborders noscrollbar transparent"
+            href="https://twitter.com/PCACriders?ref_src=twsrc%5Etfw">Tweets by PCACriders</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
         </div>
     </div>
 </section>
