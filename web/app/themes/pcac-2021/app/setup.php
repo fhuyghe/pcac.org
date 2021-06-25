@@ -235,6 +235,7 @@ function create_post_type_people() {
         'query_var' => true,
         'menu_position' => 3,
         'menu_icon' => 'dashicons-universal-access',
+        'taxonomies' => array('council'),
         'supports' => array('title','editor','thumbnail', 'excerpt')
         )
     );
