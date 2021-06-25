@@ -7,7 +7,7 @@
                 <h1>{{ the_title() }}</h1>
             </div>
             <div class="col-md-6">
-                {{ the_excerpt() }}
+                {!! $data['mission'] !!}
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
                 @php the_content() @endphp
             </div>
             <div class="col-md-4">
-                Links
+                {!! $child_pages !!}
             </div>
         </div>
     </div>
