@@ -4,7 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h1>{{ the_title() }}</h1>
+                <h1>{!! file_get_contents(App\asset_path('images/logo_PCAC.svg')) !!} {{ the_title() }}</h1>
+                <h2>{{ $data['full_name'] }}</h2>
             </div>
             <div class="col-md-6">
                 {{ the_post_thumbnail('medium') }}
@@ -23,10 +24,15 @@
                     <h4>Reports</h4>
                 </div>
                 <div class="col-md-2">
-                    <h4>Contact</h4>
-                    {{ $data['contact']}}
-                    <h4>More Info</h4>
-                    {{ $data['more_info']}}
+                    <div class="contact">
+                        <h4>Contact</h4>
+                        {{ $data['contact']}}
+                    </div>
+
+                    <div class="info">
+                        <h4>More Info</h4>
+                        {!! $child_pages !!}
+                    </div>
                 </div>
         </div>
     </div>

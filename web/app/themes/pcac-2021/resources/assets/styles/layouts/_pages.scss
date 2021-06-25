@@ -3,6 +3,12 @@
         padding: $grid-gutter 0;
     }
 
+    .parent-banner{
+        padding-top: $grid-gutter;
+        font-size: 40px;
+        font-weight: 600;
+    }
+
     // HOME
     &.home{
         section{
@@ -57,11 +63,6 @@
                     text-transform: uppercase;
                     display: flex;
                     align-items: center;
-
-                    svg{
-                        height: 50px;
-                        margin-right: 10px;
-                    }
                 }
 
                 .image{
@@ -281,7 +282,26 @@
         }
 
         #top{
+            min-height: 400px;
 
+            .logo-icon{
+                .circle{
+                    fill: theme-color(white)!important;
+                }
+            }
+        }
+
+        .contact{
+            margin-bottom: $grid-gutter;
+        }
+
+        .wpb_page_list{
+            list-style: none;
+            padding-left: 0;
+            
+            li{
+                margin-bottom: 5px;
+            }
         }
 
         #members{
