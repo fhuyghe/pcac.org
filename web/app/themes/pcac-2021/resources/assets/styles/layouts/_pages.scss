@@ -56,15 +56,6 @@
 
         #councils{
             .council-block{
-                .logo{
-                    margin-bottom: $grid-gutter / 2;
-                    font-size: 50px;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    display: flex;
-                    align-items: center;
-                }
-
                 .image{
                     margin-top: $grid-gutter / 2;
                 }
@@ -330,6 +321,16 @@
             }
         }
     }
+}
+
+// Council Logos
+.council-logo{
+    margin-bottom: $grid-gutter / 2;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
 

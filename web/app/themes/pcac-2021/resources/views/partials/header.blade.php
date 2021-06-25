@@ -14,7 +14,12 @@
           @foreach( $items as $item )
             @php $postID = get_post_meta( $item->ID, '_menu_item_object_id', true ) @endphp
             <li class="{{ basename($item->url) }}">
-              <h2><a class="themed" href="{{ $item->url }}">{{$item->title}}</a></h2>
+              <a class="themed" href="{{ $item->url }}">
+                <div class="council-logo">
+                  {!! file_get_contents(App\asset_path('images/logo_PCAC.svg')) !!}
+                  {{ $item->title }}
+              </div>
+            </a>
               {!! the_field('short_description', $postID) !!}
               {!! get_the_post_thumbnail($postID, 'medium') !!}
               <div class="link">
