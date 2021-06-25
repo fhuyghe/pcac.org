@@ -221,12 +221,12 @@ function custom_taxonomy_councils() {
 // Hook into the 'init' action
 add_action('init', __NAMESPACE__ . '\\custom_taxonomy_councils', 0);
 
-//---Staff  --//
-function create_post_type_staff() {
-    register_post_type( 'staff',
+//--- People  --//
+function create_post_type_people() {
+    register_post_type( 'people',
         array(
             'labels' => array(
-                'name' => __( 'Staff' ),
+                'name' => __( 'People' ),
             ),
         'public' => true,
         'has_archive' => true,
@@ -239,4 +239,4 @@ function create_post_type_staff() {
         )
     );
 }
-add_action( 'init', __NAMESPACE__ . '\\create_post_type_staff' );
+add_action( 'init', __NAMESPACE__ . '\\create_post_type_people' );

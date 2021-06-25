@@ -18,7 +18,7 @@ class PageAbout extends Controller
 
     public function staff(){
         $args = array(
-            'post_type' => 'staff',
+            'post_type' => 'people',
 	    	'posts_per_page' => -1
 	    );
 
