@@ -13,10 +13,28 @@ class TemplateCouncil extends Controller
 
         $data['contact'] = get_field('contact');
         $data['more_info'] = get_field('more_info');
-        $data['members'] = get_field('members');
         $data['apply_text'] = get_field('apply_text');
 
         return $data;
+    }
+
+    public function members(){
+        global $post;
+        
+        $args = array(
+            'post_type' => 'people',
+	    	'posts_per_page' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'council',
+                    'field'    => 'slug',
+                    'terms'    => $post->post_name,
+                ),
+            ),
+	    );
+
+	    $the_query = new WP_Query( $args );
+	    return $the_query->posts;
     }
 
     public function posts(){

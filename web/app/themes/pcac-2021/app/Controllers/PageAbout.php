@@ -19,7 +19,14 @@ class PageAbout extends Controller
     public function staff(){
         $args = array(
             'post_type' => 'people',
-	    	'posts_per_page' => -1
+	    	'posts_per_page' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'council',
+                    'field'    => 'slug',
+                    'terms'    => 'pcac',
+                ),
+            ),
 	    );
 
 	    $the_query = new WP_Query( $args );

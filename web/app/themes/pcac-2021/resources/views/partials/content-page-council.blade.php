@@ -53,7 +53,7 @@
 </section>
 
 {{-- MEMBERS --}}
-@if($data['members'])
+@if($members)
 <section id="members">
     <div class="container">
         <header>
@@ -63,8 +63,10 @@
         </div>
         </header>
         <div class="row">
-            @foreach ($data['members'] as $member)
+            @foreach ($members as $post)
+                @php setup_postdata($post) @endphp
                 @include('partials/member-block')
+                @php wp_reset_postdata() @endphp
             @endforeach
         </div>
     </div>
