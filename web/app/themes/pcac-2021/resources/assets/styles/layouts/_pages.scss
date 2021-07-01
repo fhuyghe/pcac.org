@@ -334,6 +334,59 @@
             }
         }
     }
+
+    &.faq{
+        h2{
+            margin-top: $grid-gutter;
+            margin-bottom: 10px;
+
+            &:first-of-type{
+                margin-top: 0;
+            }
+        }
+
+        .question{
+            margin-bottom: $grid-gutter / 2;
+            background-color: theme-color(grey);
+
+            &.active{
+                header{
+                    &:after{
+                        content: "-";
+                    }
+                }
+
+                .answer{
+                    display: block;
+                }
+            }
+
+            header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px $grid-gutter / 2;
+                cursor: pointer;
+
+                h3{
+                    font-family: $open;
+                    color: theme-color(pcac);
+                    font-size: 1em;
+                    margin-bottom: 0;
+                }
+
+                &:after{
+                    content: "+";
+                    font-size: 30px;
+                }
+            }
+
+            .answer{
+                display: none;
+                padding: $grid-gutter / 2;
+            }
+        }
+    }
 }
 
 
@@ -409,7 +462,7 @@
         .thumbnail{
             height: 400px;
             background-color: rgba(theme-color(pcac), .2);
-            
+
             img{
                 height: 400px;
             }
