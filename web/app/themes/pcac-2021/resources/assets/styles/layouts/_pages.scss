@@ -11,6 +11,10 @@
 
     // HOME
     &.home{
+        main.main{
+            padding-top: 0;
+        }
+
         section{
             .container{
                 border-bottom: 2px solid theme-color(black);
@@ -59,7 +63,7 @@
                 .council-logo{
                     margin-bottom: $grid-gutter / 2;
                 }
-                
+
                 .image{
                     margin-top: $grid-gutter / 2;
                 }
@@ -402,9 +406,13 @@
     }
 
     &.report{
-        .thumbnail,
-        .thumbnail img{
+        .thumbnail{
             height: 400px;
+            background-color: rgba(theme-color(pcac), .2);
+            
+            img{
+                height: 400px;
+            }
         }
     }
 }

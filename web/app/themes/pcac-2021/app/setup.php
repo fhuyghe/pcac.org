@@ -241,3 +241,8 @@ function create_post_type_people() {
     );
 }
 add_action( 'init', __NAMESPACE__ . '\\create_post_type_people' );
+
+// Add Theme Options Page
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();	
+}

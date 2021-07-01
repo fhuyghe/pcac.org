@@ -69,6 +69,7 @@
   }
 
   li{
+    flex: 1;
     border-right: 1px solid theme-color(black);
     padding: $grid-gutter / 2 $grid-gutter;
 
