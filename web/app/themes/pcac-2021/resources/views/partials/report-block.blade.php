@@ -3,9 +3,11 @@
     <div class="date">
         {{the_date('Y')}}
     </div>
-    <div class="thumbnail">
-        {{ the_post_thumbnail('medium') }}
-    </div>
+    <a href="{{ the_permalink() }}">
+        <div class="thumbnail">
+            {{ the_post_thumbnail('medium') }}
+        </div>
+    </a>
     <h4>{{ the_title() }}</h4>
     <footer>
         <a class="button" href="{{ the_permalink() }}">Read Online</a>

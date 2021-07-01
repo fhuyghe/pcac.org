@@ -8,10 +8,20 @@
   
   .top-banner{
     background-color: theme-color(white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px $grid-gutter / 2;
+
+    .announcement{
+      a{
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
   }
 
   .brand{
-    padding: 10px;
     display: inline-block;
 
     img{
@@ -22,7 +32,7 @@
 
   .nav{
     background-color: theme-color(grey);
-  
+    padding-left: 10px;
 
   li {
     @extend .nav-item;

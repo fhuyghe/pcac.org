@@ -6,6 +6,13 @@
         {{ get_bloginfo('name') }}
       </div>
     </a>
+    <div class="announcement">
+      @php $announcement = get_field('announcement', 'option'); @endphp
+      @if ($announcement['active'])
+          {{ $announcement['text'] }}
+          <a href="{{ $announcement['link'] }}">Read More</a>
+      @endif
+    </div>
   </div>
     <nav class="nav-primary">
       @if (has_nav_menu('primary_navigation'))
