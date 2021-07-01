@@ -18,6 +18,12 @@
       @if (has_nav_menu('primary_navigation'))
       {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
+      <div class="social">
+        @php $socialLinks = get_field('social_links', 'option') @endphp
+        @foreach ($socialLinks as $link)
+            <a href="{{ $link['link'] }}"><i class="fa-{{ strtolower($link['name']) }} fa-{{ strtolower($link['name']) }}-f fab"></i></a>
+        @endforeach
+      </div>
     </nav>
     <nav class="nav-councils">
       @if( $items = wp_get_nav_menu_items( 'councils' ) )

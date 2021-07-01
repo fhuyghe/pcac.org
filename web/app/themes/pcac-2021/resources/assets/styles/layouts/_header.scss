@@ -30,9 +30,21 @@
     }
   }  
 
-  .nav{
+  .nav-primary{
+    display: flex;
+    justify-content: space-between;
     background-color: theme-color(grey);
-    padding-left: 10px;
+    padding: 0 10px;
+
+    .social{
+      a{
+        display: inline-block;
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .nav{
 
   li {
     @extend .nav-item;
