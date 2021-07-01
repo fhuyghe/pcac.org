@@ -5,6 +5,39 @@
   width: 100%;
   z-index: 99;
   background-color: theme-color(white);
+
+  &.scrolled{
+    display: flex;
+    align-items: center;
+    background-color: theme-color(grey);
+
+    .nav-primary{
+      flex: 1;
+    }
+    
+    .top-banner{
+      background-color: theme-color(grey);
+
+      .brand{
+        .council-logo{
+          font-size: 30px;
+        }
+
+        svg{
+          width: 40px;
+        }
+      }  
+      
+      .announcement{
+        display: none;
+      }
+    }
+
+  }
+
+  .brand .council-logo{
+    transition: .25s;
+  }
   
   .top-banner{
     background-color: theme-color(white);
@@ -20,15 +53,6 @@
       }
     }
   }
-
-  .brand{
-    display: inline-block;
-
-    img{
-      width: 150px;
-      height: auto;
-    }
-  }  
 
   .nav-primary{
     display: flex;
