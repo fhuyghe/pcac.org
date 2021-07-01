@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div>
-                        <a href="/events"><- Back to All</a>
+                        <a href="/events"><i class="fal fa-arrow-left"></i> Back to All</a>
                     </div>
                      <h1>{{ $post->post_title }}</h1>
                      <div class="time">

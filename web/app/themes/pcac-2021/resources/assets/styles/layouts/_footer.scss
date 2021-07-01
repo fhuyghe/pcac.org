@@ -3,16 +3,44 @@ footer.content-info{
     color: theme-color(white);
     padding: $grid-gutter 0;
 
+    section{
+        padding: 0;
+        margin-bottom: $grid-gutter / 2;
+        max-width: 300px;
+    }
+
+    h3{
+        font-family: $open;
+        font-size: 1.2em;
+    }
+
     a{
         color: inherit;
     }
 
-    li{
-        list-style: none;
+    ul{
+        padding-left: 0;
+
+        li{
+            list-style: none;
+            padding-bottom: 5px;
+
+            a{
+                &:hover{
+                    color: theme-color(grey);
+                }
+            }
+        }
     }
 
-    .container{
-        display: flex;
-        justify-content: space-between;
+    @include media-breakpoint-up(md){
+        section{
+            margin-bottom: 0;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }

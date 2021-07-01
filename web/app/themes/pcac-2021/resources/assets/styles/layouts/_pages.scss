@@ -56,6 +56,10 @@
 
         #councils{
             .council-block{
+                .council-logo{
+                    margin-bottom: $grid-gutter / 2;
+                }
+                
                 .image{
                     margin-top: $grid-gutter / 2;
                 }
@@ -302,7 +306,8 @@
 
                 .portrait{ 
                     height: 250px;
-                    margin-bottom: 10px;
+                    margin-bottom: 20px;
+                    background: theme-color(grey);
 
                     img{
                         width: 100%;
@@ -313,6 +318,10 @@
 
                 h3{
                     font-size: 1.2em;
+
+                    a{
+                        color: theme-color(black);
+                    }
                 }
 
                 p{
@@ -321,16 +330,6 @@
             }
         }
     }
-}
-
-// Council Logos
-.council-logo{
-    margin-bottom: $grid-gutter / 2;
-    font-size: 50px;
-    font-weight: 600;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
 }
 
 
@@ -368,10 +367,12 @@
     }
 
     .thumbnail{
-        background-color: theme-color(purple);
         height: 200px;
         overflow: hidden;
         margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         img{
             width: 100%;
@@ -383,6 +384,15 @@
         &:hover{
             img{
                 opacity: .8;
+            }
+        }
+
+        .council-logo{
+            font-size: 1.2em;
+
+            svg{
+                width: 30px;
+                margin-right: 5px;
             }
         }
     }

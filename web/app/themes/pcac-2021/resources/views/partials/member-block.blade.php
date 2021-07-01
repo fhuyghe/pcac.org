@@ -3,7 +3,7 @@
         {!! the_post_thumbnail('medium') !!}
     </div>
     <div class="name">
-        <h3>{{ the_title() }}</h3>
+        <h3><a href="{{ the_permalink() }}">{{ the_title() }}</a></h3>
         @php $title = get_field('title') @endphp
         @if($title)
             <h6 class="themed">{{ $title }}</h6>
@@ -15,11 +15,9 @@
         <p>Appointed: {{ $appointed }}</p>
         @endif
 
-        @php $recommended = get_field('recommended_by') @endphp
+        @php $recommended = get_field('recommended') @endphp
         @if($recommended)
             <p>Recommended by: {{ $recommended }}</p>
         @endif
-
-        <a class="button" href="{{ the_permalink() }}">Read More</a>
     </div>
 </div>

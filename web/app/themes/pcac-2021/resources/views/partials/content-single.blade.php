@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <a href="/commentary">< Back to All</a>
+          <a href="/commentary"><i class="fal fa-arrow-left"></i> Back to All</a>
           <h1 class="entry-title">{!! get_the_title() !!}</h1>
           @include('partials/entry-meta')
         </div>

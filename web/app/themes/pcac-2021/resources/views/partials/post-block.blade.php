@@ -35,7 +35,10 @@ if(!$category) {
         @if($thumbnail)
             {!! $thumbnail !!}
         @else
-            No Thumbnail
+            <div class="council-logo">
+                {!! file_get_contents(App\asset_path('images/logo_PCAC.svg')) !!}
+                {{ $council }}
+            </div>
         @endif
     </div>
     </a>

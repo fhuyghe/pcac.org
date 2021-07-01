@@ -2,7 +2,7 @@
   <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <a href="/about">< Back to All</a>
+          <a href="/about"><i class="fal fa-arrow-left"></i> Back to All</a>
           <h1 class="entry-title">{!! get_the_title() !!}</h1>
           <h6>{{ the_field('title') }}</h6>
           @php the_content() @endphp

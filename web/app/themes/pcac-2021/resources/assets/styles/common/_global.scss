@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Roboto+Slab&display=swap');
+$open: 'Open Sans', sans-serif;
 
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: $open;
     font-weight: 300;
 
     main.main{
         margin-top: 100px;
-        padding: $grid-gutter 0;
+        padding-top: $grid-gutter;
         min-height: 100vh;
     }
 }
@@ -21,6 +22,11 @@ a{
         display: inline-block;
         padding: 5px 20px;
         border: 1px solid theme-color(primary);
+        
+        &:hover{
+            background-color: theme-color(primary);
+            color: theme-color(white);
+        }
     }
 
     &:hover{
@@ -60,9 +66,18 @@ h6{
     }
 }
 
-svg.logo-icon{
-    height: 50px;
-    margin-right: 10px;
+// Council Logos
+.council-logo{
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    svg.logo-icon{
+        height: 50px;
+        margin-right: 10px;
+    }
 }
 
 
@@ -96,6 +111,10 @@ $councils: 'pcac', 'lirrcc', 'mnrcc', 'nyctrc';
                 fill: theme-color($council)!important;
             }
         }
+    }
+
+    .thumbnail{
+        background-color: rgba(theme-color($council), .2)
     }
   }
 }

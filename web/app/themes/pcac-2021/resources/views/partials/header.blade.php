@@ -1,7 +1,10 @@
 <header class="banner">
   <div class="top-banner">
     <a class="brand" href="{{ home_url('/') }}">
-      <img src="@asset('images/pcac-logo-500.png')" />
+      <div class="council-logo">
+        {!! file_get_contents(App\asset_path('images/logo_PCAC.svg')) !!}
+        {{ get_bloginfo('name') }}
+      </div>
     </a>
   </div>
     <nav class="nav-primary">
