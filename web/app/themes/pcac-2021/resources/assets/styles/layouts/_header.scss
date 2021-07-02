@@ -37,6 +37,13 @@
 
   .brand .council-logo{
     transition: .25s;
+    color: theme-color(pcac)!important;
+    
+    svg{
+      .circle{
+        fill: theme-color(pcac)!important;
+      }
+    }
   }
   
   .top-banner{

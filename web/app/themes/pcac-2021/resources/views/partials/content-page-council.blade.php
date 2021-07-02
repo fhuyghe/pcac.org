@@ -4,13 +4,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h1>{!! file_get_contents(App\asset_path('images/logo_PCAC.svg')) !!} {{ the_title() }}</h1>
-                <h2>{{ $data['full_name'] }}</h2>
-            </div>
-            <div class="col-md-6">
-                {{ the_post_thumbnail('medium') }}
+                <div class="council-logo">{!! file_get_contents(App\asset_path('images/logo_PCAC.svg')) !!} {{ the_title() }}</div>
+                <h1>{{ $data['full_name'] }}</h1>
             </div>
         </div>
+    </div>
+    <div class="thumbnail">
+        {{ the_post_thumbnail('large') }}
     </div>
 </section>
 
@@ -20,10 +20,7 @@
             <div class="col-md-8">
                 @php the_content() @endphp
             </div>
-                <div class="col-md-2">
-                    <h4>Reports</h4>
-                </div>
-                <div class="col-md-2">
+                <div class="col-md-2 offset-md-2">
                     <div class="contact">
                         <h4>Contact</h4>
                         {{ $data['contact']}}

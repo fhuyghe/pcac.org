@@ -280,12 +280,35 @@
             }
         }
 
+        main.main{
+            padding-top: 0;
+        }
+
         #top{
             min-height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
 
-            .logo-icon{
+            .council-logo{
+                color: theme-color(white)!important;
+
                 .circle{
                     fill: theme-color(white)!important;
+                }
+            }
+
+            .thumbnail{
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                right: 0;
+                top: 0;
+
+                img{
+                    width: 100%;
+                height: 100%;
+                object-fit: cover;
                 }
             }
         }
