@@ -20,6 +20,34 @@ export default {
         banner.removeClass('scrolled');
       }
     });
+
+    //Hamburger
+    $('.hamburger').on('click', function () {
+      $('.nav-primary').toggleClass('active');
+      $(this).toggleClass('is-active');
+    });
+
+    let postGroup = $('.post-group');
+
+    postGroup.slick({
+      arrows: false,
+      dots: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      centerMode: true,
+      responsive:
+        [
+          {
+            breakpoint: 5000,
+            settings: 'unslick',
+          }, {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+            },
+          }],
+    });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

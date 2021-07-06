@@ -54,24 +54,40 @@
     padding: 10px $grid-gutter / 2;
 
     .announcement{
-      a{
-        display: inline-block;
-        margin-left: 10px;
+      display: none;
+    }
+    
+    @include media-breakpoint-up(md){
+      .announcement{
+        display: block;
+        
+        a{
+          display: inline-block;
+          margin-left: 10px;
+        }
+      }
+
+      .hambuger-wrap{
+        display: none;
       }
     }
   }
 
   .nav-primary{
-    display: flex;
+    display: none;
     justify-content: space-between;
     background-color: theme-color(grey);
     padding: 0 10px;
-
+    
     .social{
       a{
         display: inline-block;
         padding: 0.5rem;
       }
+    }
+    
+    @include media-breakpoint-up(md){
+      display: flex;
     }
   }
 

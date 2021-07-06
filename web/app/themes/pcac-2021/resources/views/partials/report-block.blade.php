@@ -5,7 +5,10 @@
     </div>
     <a href="{{ the_permalink() }}">
         <div class="thumbnail">
-            {{ the_post_thumbnail('medium') }}
+            @php $cover = get_field('cover_image') @endphp
+            @if($cover)
+                {{ $cover['sizes']['medium'] }}
+            @endif
         </div>
     </a>
     <h4>{{ the_title() }}</h4>

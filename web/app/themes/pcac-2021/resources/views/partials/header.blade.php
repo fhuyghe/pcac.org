@@ -13,6 +13,13 @@
           <a href="{{ $announcement['link'] }}">Read More</a>
       @endif
     </div>
+    <div class="hambuger-wrap">
+      <button class="hamburger hamburger--squeeze" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
   </div>
     <nav class="nav-primary">
       @if (has_nav_menu('primary_navigation'))

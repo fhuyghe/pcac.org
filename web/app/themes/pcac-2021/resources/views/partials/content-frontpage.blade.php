@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-md-6" id="mission">
             <h1>{!! $data['top_banner']['mission_statement'] !!}</h1>
+            <a class="button" href="/about">Learn More</a>
         </div>
         @php $topImage = $data['top_banner']['illustration'] @endphp
         <div class="col-md-6" id="illustration" style="background-image: url({{ $topImage['sizes']['large'] }})">
@@ -35,7 +36,20 @@
         <header>
             <h2>Commentary</h2>
             <div class="filter">
+                <div class="desktop">
                 {!! do_shortcode('[ajax_load_more_filters id="categories" target="ajax_load_more"]') !!}
+                </div>
+                <div class="mobile">
+                    @php $categories = get_categories( array('orderby' => 'name') ) @endphp
+                    <select>
+                        <option value="">Categories</option>
+                    @foreach ( $categories as $category )
+                        @if(!in_array($category->slug, ['uncategorized', 'meeting-minutes', 'letter']) )
+                        <option value="{{ $category->slug }}">{{ $category->name }}</option>
+                        @endif
+                    @endforeach
+                    </select>
+                </div>
             </div>
             <div class="button">
                 <a class="button" href="/commentary">Read All</a>
@@ -91,7 +105,7 @@
         <tr class="event">
             @php $start = strtotime(get_post_meta($event->ID, '_EventStartDate')[0]) @endphp
             <td class="date">
-                {{ date("F j", $start) }}
+                {{ date("M j", $start) }}
             </td>
             <td class="time">
                 {{ date("g:i a", $start) }}
