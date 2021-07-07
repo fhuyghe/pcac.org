@@ -136,9 +136,15 @@ $councils: 'pcac', 'lirrcc', 'mnrcc', 'nyctrc';
             }
         }
     }
-
+    
     .thumbnail{
         background-color: rgba(theme-color($council), .2)
+    }
+    
+    &.menu-item{
+        a{
+            color: theme-color($council)!important;
+        }
     }
   }
 }

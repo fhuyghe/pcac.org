@@ -22,6 +22,19 @@
             padding-bottom: 0;
         }
 
+        .post-block{
+            background-color: theme-color(white);
+            padding: 10px;
+            border: 1px solid #ddd;
+            
+            @include media-breakpoint-up(md){
+                margin-bottom: $grid-gutter;
+                border: 0;
+                padding: 0;
+                background: transparent;
+            }
+        }
+
         section{
             .container{
                 position: relative;
@@ -411,15 +424,45 @@
 
     &.commentary{
         #top{
-            padding: $grid-gutter 0;
+            padding-top: 0;
         }
 
         #filters{
-            .alm-filters{
-                display: flex;
+            h3{
+                display: none;
+            }
 
+            .alm-filters{
+                margin-bottom: 0;
+                
+                select{
+                    width: 100%;
+                }
+                
                 .alm-filter{
-                    padding-left: 20px;
+                    &:nth-child(3){
+                        .alm-filter--inner{
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-up(md){
+                h3{
+                    display: block;
+                }
+
+                .alm-filters{
+                    display: flex;
+                    
+                    .alm-filter{
+                        padding-left: 20px;
+                    }
+
+                    select{
+                        width: auto;
+                    }
                 }
             }
 
@@ -438,8 +481,6 @@
 
     &.template-council{
         section{
-            margin-bottom: $grid-gutter;
-
             header{
                 display: flex;
                 justify-content: space-between;
@@ -451,18 +492,31 @@
         }
 
         #top{
-            min-height: 400px;
             position: relative;
-            display: flex;
-            align-items: center;
+            padding-bottom: 0;
 
+            h1{
+                font-size: 1.8em;
+                margin-bottom: $grid-gutter;
+            }
+            
             .council-logo{
                 color: theme-color(white)!important;
-
+                
                 .circle{
                     fill: theme-color(white)!important;
                 }
             }
+            
+            @include media-breakpoint-up(md){
+                min-height: 400px;
+                align-items: center;
+                display: flex;
+
+                h1{
+                    font-size: 2.2em;
+                    margin-bottom: 0;
+                }
 
             .thumbnail{
                 position: absolute;
@@ -476,6 +530,7 @@
                 height: 100%;
                 object-fit: cover;
                 }
+            }
             }
         }
 
@@ -581,16 +636,10 @@
 
 // Post blocks
 .post-block{
-    background-color: theme-color(white);
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: $grid-gutter / 2;
+    margin-bottom: $grid-gutter;
     
     @include media-breakpoint-up(md){
         margin-bottom: $grid-gutter;
-        border: 0;
-        padding: 0;
-        background: transparent;
     }
 
     a{
