@@ -8,9 +8,8 @@
 
   &.scrolled{
     background-color: theme-color(white);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1);
     
-    
-
     .nav-primary{
       flex: 1;
     }
@@ -18,15 +17,7 @@
     .top-banner{
       background-color: theme-color(white);
 
-      .brand{
-        .council-logo{
-          font-size: 30px;
-        }
-
-        svg{
-          width: 40px;
-        }
-      }  
+      
       
       .announcement{
         display: none;
@@ -40,6 +31,16 @@
       
       .top-banner{
         background-color: theme-color(grey);
+
+        .brand{
+          .council-logo{
+            font-size: 30px;
+          }
+  
+          svg{
+            width: 40px;
+          }
+        }  
       }
     }
 
@@ -249,7 +250,7 @@
         justify-content: space-between;
 
         &:after{
-          content: '>';
+          content: 'ᐳ';
         }
       }
     }
@@ -257,7 +258,7 @@
     .menu-item-has-children{
       & > a{
         &:after{
-          content: 'v';
+          content: 'ᐯ';
         }
       }   
 
@@ -298,6 +299,14 @@
           &:after{
             content: '';
           }
+        }
+
+        .menu-item-has-children{
+          & > a{
+            &:after{
+              content: '';
+            }
+          }   
         }
 
         .sub-menu{
