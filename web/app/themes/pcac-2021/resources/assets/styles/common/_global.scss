@@ -146,6 +146,12 @@ $councils: 'pcac', 'lirrcc', 'mnrcc', 'nyctrc';
             color: theme-color($council)!important;
         }
     }
+    
+    .wp-block-table{
+        tr:first-child{
+            background-color: theme-color($council)
+        }
+    }
   }
 }
 
@@ -161,6 +167,23 @@ $councils: 'pcac', 'lirrcc', 'mnrcc', 'nyctrc';
         background: theme-color(purple);
         color: theme-color(white);
         padding: 10px 20px;
+    }
+}
+
+//Tables
+.wp-block-table{
+    tr{
+        td{
+            padding: 5px 10px;
+        }
+
+        &:first-child{
+            color: theme-color(white);
+        }
+
+        &:nth-child(2n+1){
+            background-color: theme-color(grey);
+        }
     }
 }
 
