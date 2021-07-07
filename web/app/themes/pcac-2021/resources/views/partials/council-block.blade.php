@@ -10,6 +10,6 @@
         <a class="button" href="{{ the_permalink() }}">Learn More</a>
     </div>
     <div class="image">
-        {{ the_post_thumbnail('medium') }}
+        {{ the_post_thumbnail('large') }}
     </div>
 </div>

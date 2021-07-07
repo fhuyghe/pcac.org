@@ -9,15 +9,7 @@
   &.scrolled{
     background-color: theme-color(white);
     
-    @include media-breakpoint-up (md) {
-      display: flex;
-      align-items: center;
-      background-color: theme-color(grey);
-      
-      .top-banner{
-        background-color: theme-color(grey);
-      }
-    }
+    
 
     .nav-primary{
       flex: 1;
@@ -38,6 +30,16 @@
       
       .announcement{
         display: none;
+      }
+    }
+
+    @include media-breakpoint-up (md) {
+      display: flex;
+      align-items: center;
+      background-color: theme-color(grey);
+      
+      .top-banner{
+        background-color: theme-color(grey);
       }
     }
 
@@ -157,6 +159,15 @@
     @include media-breakpoint-up(md){
       background-color: theme-color(grey);
       display: flex;
+      align-items: center;
+
+      .menu-top-menu-container{
+        padding: 0;
+      }
+      
+      .social{
+        padding: 0;
+      }
       
       .contact{
         display: none;
@@ -166,12 +177,14 @@
 
   .nav{
     display: block;
-
+    
     li {
+      @extend .nav-item;
       border-bottom: 1px solid theme-color(purple);
       padding: 10px 0;
-
+      
       a {
+        @extend .nav-link;      
         display: flex;
         justify-content: space-between;
 
@@ -196,6 +209,23 @@
       &:hover{
         .sub-menu{
           visibility: visible;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md){
+      display: flex;
+
+      li{
+        padding: 0;
+        border-bottom: 0;
+      
+        a {
+          display: inline-block;
+  
+          &:after{
+            content: '';
+          }
         }
       }
     }

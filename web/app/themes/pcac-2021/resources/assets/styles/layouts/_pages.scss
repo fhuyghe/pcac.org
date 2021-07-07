@@ -99,6 +99,7 @@
 
         #councils{
             .council-block{
+                margin-bottom: $grid-gutter / 2;
                 display: flex;
                 flex-flow: row wrap;
                 justify-content: space-between;
@@ -632,11 +633,18 @@
 
     &.report{
         .thumbnail{
-            height: 400px;
+            position: relative;
+            height: 0;
+            padding-top: 120%;
             background-color: rgba(theme-color(pcac), .2);
 
             img{
-                height: 400px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                transform: translateY(-50%);
             }
         }
     }
