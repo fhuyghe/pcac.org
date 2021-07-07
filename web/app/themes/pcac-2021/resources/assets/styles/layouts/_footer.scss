@@ -12,10 +12,17 @@ footer.content-info{
     section{
         padding: 0;
         margin-bottom: $grid-gutter / 2;
-        max-width: 300px;
-
+        
         &.widget_nav_menu{
             font-size: .9em;
+        }
+
+        &.widget_custom_html{
+            flex: 0 0 100%;
+        }
+        
+        @include media-breakpoint-up(md){
+            max-width: 300px;
         }
     }
 
@@ -40,6 +47,28 @@ footer.content-info{
                     color: theme-color(grey);
                 }
             }
+        }
+    }
+
+    #mc_embed_signup form{
+        padding: 0;
+
+        .mc-field-group{
+            width: 100%;
+        }
+
+        input[type="email"]{
+            border-radius: 0;
+            background-color: theme-color(white);
+            width: 100%;
+        }
+
+        input[type="submit"]{
+            background-color: theme-color(black);
+            color: theme-color(white);
+            border: 1px solid theme-color(white);
+            border-radius: 0;
+            margin: 0;
         }
     }
 
