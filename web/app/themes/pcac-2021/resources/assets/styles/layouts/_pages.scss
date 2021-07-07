@@ -23,8 +23,23 @@
 
         section{
             .container{
-                border-bottom: 2px solid theme-color(black);
+                position: relative;
                 padding-bottom: $grid-gutter * 2;
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 80%;
+                    border-bottom: 1px solid theme-color(black);
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                    
+                    @include media-breakpoint-up(md){
+                        border-bottom-width: 2px; 
+                        width: 100%;
+                    }
+                }
             }
         }
 
@@ -84,12 +99,49 @@
 
         #councils{
             .council-block{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+
+                .link{
+                    order: 1;
+                }
+
+                .description{
+                    order: 2;
+                    margin-top: 10px;
+                }
+
                 .council-logo{
-                    margin-bottom: $grid-gutter / 2;
+                    order: 0;
+                    font-size: 30px;
+
+                    svg{
+                        height: 40px;
+                    }
                 }
 
                 .image{
+                    order: 4;
+                    width: 100%;
                     margin-top: $grid-gutter / 2;
+                }
+
+                @include media-breakpoint-up(md){
+                    display: block;
+
+                    .description{
+                        margin-top: $grid-gutter / 2;
+                    }
+
+                    .council-logo{
+                        font-size: 40px;
+
+                        svg{
+                            height: 50px;
+                        }
+                    }
                 }
             }
         }
@@ -260,7 +312,10 @@
 
             .container{
                 padding-bottom: 0;
-                border-bottom: 0;
+                
+                &:after{
+                    display: none;
+                }
             }
 
             .link{
@@ -279,8 +334,11 @@
 
         #twitter{
             .container{
-                border-bottom: 0;
                 padding-bottom: 0;
+
+                &:after{
+                    display: none;
+                }
             }
 
             .tweet{
@@ -496,12 +554,13 @@
 
 // Post blocks
 .post-block{
-    margin-bottom: $grid-gutter;
     background-color: theme-color(white);
     padding: 10px;
     border: 1px solid #ddd;
-
+    margin-bottom: $grid-gutter / 2;
+    
     @include media-breakpoint-up(md){
+        margin-bottom: $grid-gutter;
         border: 0;
         padding: 0;
         background: transparent;

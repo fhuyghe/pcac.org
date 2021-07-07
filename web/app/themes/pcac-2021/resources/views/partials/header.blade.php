@@ -13,7 +13,7 @@
           <a href="{{ $announcement['link'] }}">Read More</a>
       @endif
     </div>
-    <div class="hambuger-wrap">
+    <div class="hamburger-wrap">
       <button class="hamburger hamburger--squeeze" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -30,6 +30,9 @@
         @foreach ($socialLinks as $link)
             <a href="{{ $link['link'] }}"><i class="fa-{{ strtolower($link['name']) }} fa-{{ strtolower($link['name']) }}-f fab"></i></a>
         @endforeach
+      </div>
+      <div class="contact">
+        {!! the_field('contact', 'option') !!}
       </div>
     </nav>
     <nav class="nav-councils">

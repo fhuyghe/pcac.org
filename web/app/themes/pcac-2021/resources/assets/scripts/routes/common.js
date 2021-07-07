@@ -27,7 +27,7 @@ export default {
       $(this).toggleClass('is-active');
     });
 
-    let postGroup = $('.post-group');
+    let postGroup = $('.home .alm-reveal, #reports .row');
 
     postGroup.slick({
       arrows: false,

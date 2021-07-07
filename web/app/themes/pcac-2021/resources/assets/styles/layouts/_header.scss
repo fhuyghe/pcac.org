@@ -7,16 +7,24 @@
   background-color: theme-color(white);
 
   &.scrolled{
-    display: flex;
-    align-items: center;
-    background-color: theme-color(grey);
+    background-color: theme-color(white);
+    
+    @include media-breakpoint-up (md) {
+      display: flex;
+      align-items: center;
+      background-color: theme-color(grey);
+      
+      .top-banner{
+        background-color: theme-color(grey);
+      }
+    }
 
     .nav-primary{
       flex: 1;
     }
     
     .top-banner{
-      background-color: theme-color(grey);
+      background-color: theme-color(white);
 
       .brand{
         .council-logo{
@@ -51,13 +59,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px $grid-gutter / 2;
+    padding: 10px;
 
     .announcement{
       display: none;
     }
+
+    .hamburger-wrap{
+      background: theme-color(pcac);
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hamburger{
+        height: 18px;
+
+        &:focus{
+          outline: 0;
+        }
+      }
+    }
     
     @include media-breakpoint-up(md){
+      padding: 10px $grid-gutter / 2;
+
       .announcement{
         display: block;
         
@@ -67,7 +96,7 @@
         }
       }
 
-      .hambuger-wrap{
+      .hamburger-wrap{
         display: none;
       }
     }
@@ -76,83 +105,142 @@
   .nav-primary{
     display: none;
     justify-content: space-between;
-    background-color: theme-color(grey);
-    padding: 0 10px;
+    background-color: theme-color(white);
+    padding: 0;
+
+    .menu-top-menu-container{
+      padding: 15px;
+    }
     
     .social{
+      padding: 0 15px 15px;
+
       a{
         display: inline-block;
-        padding: 0.5rem;
+        padding-right: 0.5rem;
+      }
+    }
+    
+    &.active{
+      display: block;
+
+      &:before{
+        content: '';
+        z-index: -1;
+        position: fixed;
+        background: rgba(theme-color(black), .6);
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        animation-name: fade-in;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    .contact{
+      padding: $grid-gutter / 2 15px;
+      background: theme-color(pcac);
+      color: theme-color(white);
+      
+      a{
+        color: theme-color(white);
+      }
+
+      p{
+        margin-bottom: 0;
       }
     }
     
     @include media-breakpoint-up(md){
+      background-color: theme-color(grey);
       display: flex;
+      
+      .contact{
+        display: none;
+      }
     }
   }
 
   .nav{
+    display: block;
 
-  li {
-    @extend .nav-item;
+    li {
+      border-bottom: 1px solid theme-color(purple);
+      padding: 10px 0;
 
-    a {
-      @extend .nav-link;
+      a {
+        display: flex;
+        justify-content: space-between;
+
+        &:after{
+          content: '>';
+        }
+      }
     }
-  }
 
-  .menu-item-has-children{
-    .sub-menu{
-      position: absolute;
-      visibility: hidden;
-      background-color: theme-color(white);
-      padding: $grid-gutter / 2;
+    .menu-item-has-children{
+      .sub-menu{
+        position: absolute;
+        visibility: hidden;
+        background-color: theme-color(white);
+        padding: $grid-gutter / 2;
+
+        &:hover{
+          visibility: visible;
+        }
+      }
 
       &:hover{
-        visibility: visible;
-      }
-    }
-
-    &:hover{
-      .sub-menu{
-        visibility: visible;
+        .sub-menu{
+          visibility: visible;
+        }
       }
     }
   }
-}
 }
 
 .nav-councils{
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  background: theme-color(grey);
-  list-style: none;
-  max-width: 1200px;
-  transition: .25s;
-  transform: translateY(-100%);
-  z-index: -1;
-  
-  &.active{
-    transform: translateY(0);
-  }
+  display: none;
 
-  li{
-    flex: 1;
-    border-right: 1px solid theme-color(black);
-    padding: $grid-gutter / 2 $grid-gutter;
-
-    h2{
-      margin-bottom: 5px;
+  @include media-breakpoint-up(md){
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background: theme-color(grey);
+    list-style: none;
+    max-width: 1200px;
+    transition: .25s;
+    transform: translateY(-100%);
+    z-index: -1;
+    
+    &.active{
+      transform: translateY(0);
     }
 
-    img{
-      margin-bottom: 5px;
-    }
+    li{
+      flex: 1;
+      border-right: 1px solid theme-color(black);
+      padding: $grid-gutter / 2 $grid-gutter;
 
-    &:last-child{
-      border-right: 0;
+      h2{
+        margin-bottom: 5px;
+      }
+
+      img{
+        margin-bottom: 5px;
+      }
+
+      &:last-child{
+        border-right: 0;
+      }
     }
   }
 }
 
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

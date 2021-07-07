@@ -7,7 +7,7 @@
         <div class="thumbnail">
             @php $cover = get_field('cover_image') @endphp
             @if($cover)
-                {{ $cover['sizes']['medium'] }}
+                <img src="{{ $cover['sizes']['medium'] }}" />
             @endif
         </div>
     </a>

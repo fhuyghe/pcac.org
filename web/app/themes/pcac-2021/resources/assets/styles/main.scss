@@ -12,11 +12,11 @@
 // @import "~some-node-module";
 
 $hamburger-padding-x: 0px;
-$hamburger-padding-y: 7px;
+$hamburger-padding-y: 0px;
 $hamburger-types     : (squeeze);
-$hamburger-layer-width         : 30px;
-$hamburger-layer-height        : 3px;
-$hamburger-layer-spacing       : 4px;
+$hamburger-layer-width         : 25px;
+$hamburger-layer-height        : 2px;
+$hamburger-layer-spacing       : 6px;
 $hamburger-layer-color: theme-color(white);
 @import "~hamburgers/_sass/hamburgers/hamburgers.scss";
 
