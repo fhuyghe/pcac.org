@@ -368,6 +368,10 @@
     }
 
     &.about{
+        main.main{
+            padding-top: 0;
+        }
+
         #top{
             background-color: theme-color(purple);
             color: theme-color(white);

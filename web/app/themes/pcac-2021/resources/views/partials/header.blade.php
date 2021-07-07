@@ -25,6 +25,9 @@
       @if (has_nav_menu('primary_navigation'))
       {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
+      <div class="search-wrap">
+        {!! do_shortcode('[ivory-search id="7011" title="Default Search Form"]') !!}
+      </div>
       <div class="social">
         @php $socialLinks = get_field('social_links', 'option') @endphp
         @foreach ($socialLinks as $link)

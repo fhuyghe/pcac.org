@@ -91,6 +91,8 @@
 
       .announcement{
         display: block;
+        color: theme-color(pcac);
+        font-size: .9em;
         
         a{
           display: inline-block;
@@ -121,6 +123,10 @@
         display: inline-block;
         padding-right: 0.5rem;
       }
+    }
+
+    .search-wrap{
+      display: none;
     }
     
     &.active{
@@ -163,6 +169,7 @@
 
       .menu-top-menu-container{
         padding: 5px;
+        flex: 1;
       }
       
       .social{
@@ -171,6 +178,35 @@
       
       .contact{
         display: none;
+      }
+
+      .search-wrap{
+        display: block;
+        margin-right: $grid-gutter / 2;
+
+        input[type="search"]{
+          background: transparent;
+          border: 0!important;
+          border-bottom: 1px solid theme-color(pcac)!important;
+          height: 30px;
+          
+          &::placeholder{
+            opacity: 0;
+          }
+        }
+        
+        button[type="submit"]{
+          .is-search-icon{
+            background: transparent;
+            border: 0!important;
+            border-bottom: 1px solid theme-color(pcac)!important;
+            height: 30px;
+  
+            path{
+              fill: theme-color(pcac);
+            }
+          }
+        }
       }
     }
   }
@@ -269,6 +305,16 @@
         border-right: 0;
       }
     }
+  }
+}
+
+// Ivory Search
+div.is-ajax-search-details, 
+div.is-ajax-search-result{
+  background-color: theme-color(white)!important;
+  
+  .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background-color: theme-color(pcac);
   }
 }
 
