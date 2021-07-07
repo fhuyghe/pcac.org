@@ -1,10 +1,16 @@
 @php global $post @endphp
 
+@php 
+    function formatTitle($title){
+        return preg_replace('/\*(.*?)\*/', '<span>$1</span>', $title);
+    }
+@endphp
+
 {{-- TOP --}}
 <section id="top">
     <div class="row">
         <div class="col-md-6" id="mission">
-            <h1>{!! $data['top_banner']['mission_statement'] !!}</h1>
+            <h1>{!! formatTitle($data['top_banner']['mission_statement']) !!}</h1>
             <a class="button" href="/about">Learn More</a>
         </div>
         @php $topImage = $data['top_banner']['illustration'] @endphp

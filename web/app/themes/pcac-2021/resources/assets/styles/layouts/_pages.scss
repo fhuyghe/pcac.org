@@ -66,6 +66,10 @@
                     font-size: 1.4em;
                     font-weight: 200;
                     max-width: 500px;
+
+                    span{
+                        font-weight: 600;
+                    }
                 }
 
                 .button{
@@ -98,6 +102,8 @@
         }
 
         #councils{
+            padding-top: $grid-gutter * 2;
+
             .council-block{
                 margin-bottom: $grid-gutter / 2;
                 display: flex;
