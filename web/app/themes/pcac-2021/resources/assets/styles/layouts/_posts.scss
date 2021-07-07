@@ -1,4 +1,8 @@
 .single{
+    main.main{
+        padding-top: 0;
+    }
+    
     article{
         header{
             position: relative;
@@ -45,12 +49,6 @@
         h6{
             color: theme-color(pcac);
             margin-bottom: $grid-gutter / 2;
-        }
-    }
-
-    &.reports{
-        main.main{
-            padding-top: 0;
         }
     }
 }

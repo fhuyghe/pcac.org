@@ -19,6 +19,7 @@
 
         main.main{
             padding-top: 0;
+            padding-bottom: 0;
         }
 
         section{
@@ -136,10 +137,15 @@
                 }
 
                 @include media-breakpoint-up(md){
-                    display: block;
+                    display: flex;
+                    height: 100%;
 
                     .description{
-                        margin-top: $grid-gutter / 2;
+                        margin-top: 10px;
+                    }
+
+                    .link{
+                        order: 2;
                     }
 
                     .council-logo{
@@ -187,7 +193,17 @@
                 @include media-breakpoint-up(md){
                     
                     .filter{
+                        flex: 0;
+                        order: 2;
                         padding-right: $grid-gutter / 2;
+
+                        .desktop li{
+                            white-space: nowrap;
+                        }
+                    }
+
+                    .button{
+                        order: 3;
                     }
                 }
 
@@ -658,4 +674,10 @@
             }
         }
     }
+}
+
+//Search
+.nav-links{
+    display: flex;
+    justify-content: space-between;
 }

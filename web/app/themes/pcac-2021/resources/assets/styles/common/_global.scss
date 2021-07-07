@@ -8,6 +8,7 @@ body{
     main.main{
         margin-top: 80px;
         padding-top: $grid-gutter;
+        padding-bottom: $grid-gutter;
         min-height: 100vh;
         
         @include media-breakpoint-up(md){

@@ -1,5 +1,5 @@
 @php 
-$council_term = get_the_terms($post, 'council');
+$council_term = wp_get_post_terms(get_the_ID(), 'council');
 $category = [];
 
 if($council_term && $council_term[0]){
@@ -8,14 +8,14 @@ if($council_term && $council_term[0]){
     $council = 'pcac';
 }
 
-$term_list = wp_get_post_terms($post->ID, 'category', ['fields' => 'all']);
+$term_list = wp_get_post_terms(get_the_ID(), 'category', ['fields' => 'all']);
 foreach($term_list as $term) {
-   if( get_post_meta($post->ID, '_yoast_wpseo_primary_category',true) == $term->term_id ) {
+   if( get_post_meta(get_the_ID(), '_yoast_wpseo_primary_category',true) == $term->term_id ) {
      $category = $term;
    }
 }
 if(!$category) {
-    $category = $term_list[0];
+    $category = $term_list ? $term_list[0] : '';
 }
 @endphp
 
@@ -42,9 +42,13 @@ if(!$category) {
         @endif
     </div>
     </a>
+
+    @if($category)
     <div class="category themed">
         {{ $category->name }}
     </div>
+    @endif
+
     <h4><a href="{{ the_permalink() }}">{{ the_title() }}</a></h4>
     {{ the_excerpt() }}
 </div>
