@@ -108,21 +108,7 @@
                 <th></th>
             </tr>
         @foreach ($events as $event)
-        <tr class="event">
-            @php $start = strtotime(get_post_meta($event->ID, '_EventStartDate')[0]) @endphp
-            <td class="date">
-                {{ date("M j", $start) }}
-            </td>
-            <td class="time">
-                {{ date("g:i a", $start) }}
-            </td>
-            <td class="subject">
-                {{ $event->post_title }}
-            </td>
-            <td class="link">
-                <a href="{{ the_permalink($event->ID) }}">More Info</a>
-            </td>
-        </tr>
+            @include('partials.event-row')
         @endforeach
         </table>
     </div>

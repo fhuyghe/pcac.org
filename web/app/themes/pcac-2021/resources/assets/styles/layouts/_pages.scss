@@ -760,6 +760,7 @@
                 &.link{
                     color: theme-color(pcac);
                     cursor: pointer;
+                    text-align: right;
 
                     &:after{
                         content: 'More Info';
