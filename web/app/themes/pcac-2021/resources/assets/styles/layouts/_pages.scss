@@ -4,9 +4,15 @@
     }
 
     .parent-banner{
-        padding-top: $grid-gutter;
+        padding: $grid-gutter / 2 0;
         font-size: 40px;
         font-weight: 600;
+    }
+
+    &.page-child{
+        main.main{
+            padding-top: 0;
+        }
     }
 
     // HOME
@@ -473,8 +479,11 @@
             }
         }
 
-        .contact{
-            margin-bottom: $grid-gutter;
+        #history{
+            .contact,
+        .info{
+            margin-top: $grid-gutter;
+        }
         }
 
         .wpb_page_list{

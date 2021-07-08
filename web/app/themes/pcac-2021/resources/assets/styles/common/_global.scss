@@ -7,11 +7,13 @@ body{
 
     main.main{
         margin-top: 80px;
-        padding-top: $grid-gutter;
-        padding-bottom: $grid-gutter;
+        padding-top: $grid-gutter / 2;
+        padding-bottom: $grid-gutter / 2;
         min-height: 100vh;
         
         @include media-breakpoint-up(md){
+            padding-top: $grid-gutter;
+            padding-bottom: $grid-gutter;
             margin-top: 120px;
         }
     }
@@ -37,6 +39,21 @@ a{
     &:hover{
         text-decoration: none;
         color: theme-color(purple);
+    }
+}
+
+.wp-block-file .wp-block-file__button{
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid theme-color(primary);
+    background: transparent;
+    color: theme-color(black);
+    border-radius: 0;
+    font-size: 1em;
+    
+    &:hover{
+        background-color: theme-color(primary);
+        color: theme-color(white);
     }
 }
 
@@ -146,6 +163,10 @@ $councils: 'pcac', 'lirrcc', 'mnrcc', 'nyctrc';
     }
     
     .thumbnail{
+        background-color: rgba(theme-color($council), .2)
+    }
+    
+    &.parent-banner{
         background-color: rgba(theme-color($council), .2)
     }
     
