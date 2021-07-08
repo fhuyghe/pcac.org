@@ -480,10 +480,17 @@
         }
 
         #history{
-            .contact,
-        .info{
-            margin-top: $grid-gutter;
-        }
+            .contact{
+                margin-top: $grid-gutter;
+            }
+
+            .info{
+                margin-top: $grid-gutter;
+
+                @include media-breakpoint-up(md){
+                    margin-top: 0;
+                }
+            }
         }
 
         .wpb_page_list{
