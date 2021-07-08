@@ -258,13 +258,7 @@
       }
     }
 
-    .menu-item-has-children{
-      & > a{
-        &:after{
-          content: 'ᐯ';
-        }
-      }   
-
+    .menu-item-has-children{  
       .sub-menu{
         height: 0;
         list-style: none;
@@ -281,6 +275,10 @@
       }
 
       &:hover{
+        &> a:after{
+          content: 'ᐯ';
+        }
+
         .sub-menu{
           height: auto;
         }

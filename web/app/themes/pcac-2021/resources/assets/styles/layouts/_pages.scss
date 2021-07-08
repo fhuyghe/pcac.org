@@ -343,10 +343,41 @@
 
     &.commentary{
         #top{
-            padding-top: 0;
+            padding: 0;
+
+            .title{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .button{
+                &:hover{
+                    background: transparent;
+                    color: theme-color(pcac);
+                }
+
+                @include media-breakpoint-up(md){
+                    display: none;
+                }
+            }
+
+            &.filters-on{
+                #filters{
+                    display: block;
+                }
+
+                .button{
+                    color: theme-color(white);
+                    background: theme-color(pcac);
+                }
+            }
         }
 
         #filters{
+            display: none;
+
             h3{
                 display: none;
             }
@@ -368,6 +399,8 @@
             }
 
             @include media-breakpoint-up(md){
+                display: block;
+
                 h3{
                     display: block;
                 }

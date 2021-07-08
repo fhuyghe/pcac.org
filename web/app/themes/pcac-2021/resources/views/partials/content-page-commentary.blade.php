@@ -1,7 +1,10 @@
 <section id="top">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 title">
             <h1>{!! App::title() !!}</h1>
+            <div>
+            <a class="button" id="filterToggle" href="#">Filter</a>
+            </div>
         </div>
         <div class="col-md-6" id="filters">
             {!! do_shortcode('[ajax_load_more_filters id="commentary_filter" target="alm_commentary_filter"]') !!}
