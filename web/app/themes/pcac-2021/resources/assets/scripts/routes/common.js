@@ -22,8 +22,7 @@ export default {
     });
 
     // Event Lists
-    $('.event-list .link').on('click', function (e) {
-      e.stopPropagation();
+    $('.event-list').on('click', function (e) {
       $(e.target).closest('.event').toggleClass('active');
     });
 

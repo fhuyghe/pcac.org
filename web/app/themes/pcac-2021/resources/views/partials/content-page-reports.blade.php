@@ -1,7 +1,3 @@
-<section class="intro">
-    @php the_content() @endphp
-</section>
-
 <section id="reports">
     @php
         $args = array(
@@ -10,7 +6,7 @@
             'posts_per_page' => '6',
             'button_label' => 'More Reports',
             'button_loading_label' => 'Loading...',
-            'placeholder' => 'false',
+            'placeholder' => 'true',
             'theme_repeater' => 'repeater-report-block.php',
             'scroll' => 'false'
         );	

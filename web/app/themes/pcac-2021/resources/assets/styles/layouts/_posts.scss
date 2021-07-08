@@ -8,21 +8,28 @@
             position: relative;
             background: theme-color(grey);
             min-height: 30vh;
-            padding: $grid-gutter;
+            
+            .text{
+                padding: $grid-gutter / 2 15px;
+            }
+            
+            @include media-breakpoint-up(md){
+                padding: $grid-gutter;
 
-            .thumbnail{
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 50%;
-                height: 100%;
-                overflow: hidden;
-                
-                img{
-                    width: 100%;
+                .thumbnail{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 50%;
                     height: 100%;
-                    object-fit: cover;
-                    object-position: left;
+                    overflow: hidden;
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: left;
+                    }
                 }
             }
         }

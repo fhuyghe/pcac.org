@@ -32,7 +32,7 @@
 <section id="councils">
     <div class="container">
         <h2>{{ $data['councils']['title'] }}</h2>
-    <div class="row">
+    <div class="row councils">
         @foreach ($data['councils']['councils'] as $council)
             <div class="col-md-4">
                 @php $post = $council['council'] @endphp
