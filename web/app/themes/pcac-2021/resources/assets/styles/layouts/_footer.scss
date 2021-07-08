@@ -2,6 +2,7 @@ footer.content-info{
     background: theme-color(black);
     color: theme-color(white);
     padding: $grid-gutter 0;
+    font-size: .9em;
 
     .container{
         display: flex;
@@ -14,7 +15,7 @@ footer.content-info{
         margin-bottom: $grid-gutter / 2;
         
         &.widget_nav_menu{
-            font-size: .9em;
+            
         }
 
         &.widget_custom_html{
@@ -50,17 +51,29 @@ footer.content-info{
         }
     }
 
-    #mc_embed_signup form{
+    #mc_embed_signup #mc-embedded-subscribe-form{
         padding: 0;
 
         .mc-field-group{
             width: 100%;
         }
 
+        div.mce_inline_error{
+            background-color: transparent;
+            padding: 5px 0 0;
+            margin: 0;
+        }
+
         input[type="email"]{
             border-radius: 0;
             background-color: theme-color(white);
             width: 100%;
+            font-size: .9em;
+            padding: 10px 5px;
+
+            &::placeholder{
+                color: theme-color(pcac);
+            }
         }
 
         input[type="submit"]{
@@ -69,6 +82,8 @@ footer.content-info{
             border: 1px solid theme-color(white);
             border-radius: 0;
             margin: 0;
+            font-weight: 200;
+            line-height: 1em;
         }
     }
 

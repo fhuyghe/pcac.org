@@ -21,6 +21,12 @@ export default {
       }
     });
 
+    // Event Lists
+    $('.event-list .link').on('click', function (e) {
+      e.stopPropagation();
+      $(e.target).closest('.event').toggleClass('active');
+    });
+
     //Hamburger
     $('.hamburger').on('click', function () {
       $('.nav-primary').toggleClass('active');

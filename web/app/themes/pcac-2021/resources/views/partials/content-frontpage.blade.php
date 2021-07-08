@@ -99,7 +99,7 @@
                 </div>
             </div>
         </header>
-    <div class="events">
+    <div class="event-list">
         <table>
             <tr>
                 <th>Date</th>

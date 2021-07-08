@@ -5,7 +5,6 @@
         <div class="col-md-6">
           <a href="/reports"><i class="fal fa-arrow-left"></i> Back to All</a>
           <h1 class="entry-title">{!! get_the_title() !!}</h1>
-          <p>{{ the_excerpt() }}</p>
 
           @php $pdf = get_field('pdf_link') @endphp
           @if($pdf)

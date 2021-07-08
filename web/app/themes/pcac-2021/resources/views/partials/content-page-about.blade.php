@@ -27,13 +27,6 @@
     </div>
 </section>
 
-{{-- Goals --}}
-<section id="goals">
-    <div class="container">
-        The goals
-    </div>
-</section>
-
 
 {{-- Councils --}}
 <section id="councils">

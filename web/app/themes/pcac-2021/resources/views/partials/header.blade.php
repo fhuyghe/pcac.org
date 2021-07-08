@@ -28,12 +28,14 @@
       <div class="search-wrap">
         {!! do_shortcode('[ivory-search id="7011" title="Default Search Form"]') !!}
       </div>
+
       <div class="social">
         @php $socialLinks = get_field('social_links', 'option') @endphp
         @foreach ($socialLinks as $link)
-            <a href="{{ $link['link'] }}"><i class="fa-{{ strtolower($link['name']) }} fa-{{ strtolower($link['name']) }}-f fab"></i></a>
+            <a href="{{ $link['link'] }}" target="_blank"><i class="fa-{{ strtolower($link['name']) }} fa-{{ strtolower($link['name']) }}-f fab"></i></a>
         @endforeach
       </div>
+
       <div class="contact">
         {!! the_field('contact', 'option') !!}
       </div>

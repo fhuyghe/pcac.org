@@ -21,10 +21,12 @@
                 @php the_content() @endphp
             </div>
                 <div class="col-md-2 offset-md-2">
+                    @if($data['contact'])
                     <div class="contact">
                         <h4>Contact</h4>
-                        {{ $data['contact']}}
+                        {{ $data['contact'] }}
                     </div>
+                    @endif
 
                     <div class="info">
                         <h4>More Info</h4>

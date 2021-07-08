@@ -1,6 +1,10 @@
 <div class="member-block col-md-4">
     <div class="portrait">
-        {!! the_post_thumbnail('medium') !!}
+        @if(has_post_thumbnail())
+            {!! the_post_thumbnail('medium') !!}
+        @else
+            <img class="default" src="@asset('images/default-avatar.png')" />
+        @endif
     </div>
     <div class="name">
         <h3><a href="{{ the_permalink() }}">{{ the_title() }}</a></h3>

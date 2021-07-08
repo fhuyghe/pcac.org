@@ -301,7 +301,7 @@
           }
         }
 
-        .menu-item-has-children{
+        &.menu-item-has-children{
           & > a{
             &:after{
               content: '';
