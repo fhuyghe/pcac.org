@@ -43,20 +43,15 @@
     <nav class="nav-councils">
       @if( $items = wp_get_nav_menu_items( 'councils' ) )
           @foreach( $items as $item )
-            @php $postID = get_post_meta( $item->ID, '_menu_item_object_id', true ) @endphp
-            <li class="{{ basename($item->url) }}">
-              <a class="themed" href="{{ $item->url }}">
-                <div class="council-logo">
-                  {!! file_get_contents(App\asset_path('images/logo_PCAC.svg')) !!}
-                  {{ $item->title }}
-              </div>
-            </a>
-              {!! the_field('short_description', $postID) !!}
-              {!! get_the_post_thumbnail($postID, 'medium') !!}
-              <div class="link">
-                <a href="{{ $item->url }}" class="themed">Learn More</a>
-              </div>
+          @php  global $post;
+          $postID = get_post_meta( $item->ID, '_menu_item_object_id', true );
+          $post = get_post($postID);
+          @endphp
+            @php setup_postdata($post) @endphp
+            <li>
+              @include('partials.council-block')
             </li>
+            @php wp_reset_postdata() @endphp
           @endforeach
       @endif
     </nav>

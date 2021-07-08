@@ -116,6 +116,10 @@ $councils: 'pcac', 'lirrcc', 'mnrcc', 'nyctrc';
         border-color: theme-color($council);
     }   
 
+    .button:hover{
+        background-color: theme-color($council);
+    }
+
     #top{
         background-color: theme-color($council);
         color: theme-color(white);

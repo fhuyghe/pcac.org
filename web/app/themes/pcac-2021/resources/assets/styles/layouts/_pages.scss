@@ -186,7 +186,8 @@
                         padding: 5px 10px;
                         font-size: 1em;
                         
-                        &.active{
+                        &.active,
+                        &:hover{
                             color: theme-color(white);
                             background-color: theme-color(purple);
                         }
