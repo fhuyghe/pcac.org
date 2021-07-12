@@ -51,7 +51,7 @@
                         <option value="">Categories</option>
                     @foreach ( $categories as $category )
                         @if(!in_array($category->slug, ['uncategorized', 'meeting-minutes', 'letter']) )
-                        <option value="{{ $category->slug }}">{{ $category->name }}</option>
+                        <option data-post-type="post" data-category="{{ $category->slug }}">{{ $category->name }}</option>
                         @endif
                     @endforeach
                     </select>
