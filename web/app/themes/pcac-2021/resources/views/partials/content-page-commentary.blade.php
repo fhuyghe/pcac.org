@@ -16,6 +16,8 @@
     @php
         $args = array(
             'id' => 'alm_commentary_filter',
+            'filters' => 'true',
+            'target' => 'commentary_filter',
             'post_type' => 'post',
             'posts_per_page' => '6',
             'button_label' => 'More Reports',

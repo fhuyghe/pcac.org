@@ -145,3 +145,5 @@ add_action( 'tribe_events_after_view', function($file) {
 
     } else echo $html;
 } );
+
+add_filter( 'alm_debug', '__return_true' );
