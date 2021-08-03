@@ -37,11 +37,17 @@
         .entry-content{
             padding: $grid-gutter 0;
         }
+
+        &.category-meeting-minutes{
+            .author{
+                display: none;
+            }
+        }
     }
 
     &.single-people{
         article{
-            margin-top: $grid-gutter;
+            padding-top: $grid-gutter;
 
             .thumbnail{
                 margin-bottom: $grid-gutter;

@@ -307,7 +307,12 @@
             &:after{
               content: '';
             }
-          }   
+          }
+          &:hover{
+            &> a:after{
+              content: '';
+            }
+          }
         }
 
         .sub-menu{

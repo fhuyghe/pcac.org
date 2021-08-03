@@ -20,7 +20,7 @@
             'target' => 'commentary_filter',
             'post_type' => 'post',
             'posts_per_page' => '6',
-            'button_label' => 'More Reports',
+            'button_label' => 'More Posts',
             'button_loading_label' => 'Loading...',
             'placeholder' => 'true',
             'theme_repeater' => 'repeater-post-block.php',

@@ -119,7 +119,14 @@
 <section id="reports">
     <div class="container">
         <header>
-            <h2>Reports</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-8">
+                    <h2>Reports</h2>
+                </div>
+                <div class="col-md-6 col-lg-4 link">
+                    <a class="button" href="/reports">All reports</a>
+                </div>
+            </div>
         </header>
     <div class="row">
         @foreach ($reports as $post)

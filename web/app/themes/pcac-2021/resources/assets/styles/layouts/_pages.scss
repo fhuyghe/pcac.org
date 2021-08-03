@@ -240,6 +240,12 @@
                 margin-bottom: 20px;
             }
         }
+
+        #reports{
+            header .link{
+                text-align: right;
+            }
+        }
         
         #feature{
             .container{
@@ -326,12 +332,33 @@
             }
         }
 
+        .wpb_page_list{
+            list-style: none;
+            padding-left: 0;
+            
+            li{
+                margin-bottom: 5px;
+            }
+        }
+
         #staff{
             .staff-block{
                 margin-bottom: $grid-gutter / 2;
 
                 .portrait{
-                    margin-bottom: 10px;
+                    height: 250px;
+                    margin-bottom: 20px;
+                    background: theme-color(grey);
+
+                    img{
+                        width: 100%;
+                        height: 250px;
+                        object-fit: cover;
+
+                        &.default{
+                            opacity: .2;
+                        }
+                    }
                 }
 
                 h6{
@@ -573,6 +600,10 @@
 
     &.calendar{
         background-color: theme-color(grey);
+
+        @include media-breakpoint-up(md){
+            background-color: theme-color(white);
+        }
     }
 
     &.faq{
@@ -708,6 +739,7 @@
             height: 0;
             padding-top: 120%;
             background-color: rgba(theme-color(pcac), .2);
+            border: 1px solid theme-color(grey);
 
             img{
                 position: absolute;
@@ -717,6 +749,17 @@
                 object-position: top;
                 transform: translateY(-50%);
             }
+        }
+    }
+
+    &.meeting-minutes{
+        p,
+        h4{
+            display: none;
+        }
+
+        .date{
+            color: theme-color(black);
         }
     }
 }

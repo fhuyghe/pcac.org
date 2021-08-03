@@ -8,7 +8,7 @@
 
           @php $pdf = get_field('pdf_link') @endphp
           @if($pdf)
-            <a class="button" href="{{ $pdf }}" target="_blank">Download PDF</a>
+            <a class="button" href="{{ $pdf }}" target="_blank">Full Report</a>
           @endif
         </div>
       </div>
