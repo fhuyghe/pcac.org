@@ -321,14 +321,46 @@
         }
 
         #top{
-            background-color: theme-color(purple);
+            position: relative;
+            padding-bottom: 0;
             color: theme-color(white);
-            min-height: 30vh;
-            display: flex;
-            align-items: center;
+            background-color: theme-color(pcac);
+
+            h1{
+                font-size: 1.8em;
+                margin-bottom: $grid-gutter / 2;
+            }
             
-            .row{
+            .council-logo{
+                color: theme-color(white)!important;
+                
+                .circle{
+                    fill: theme-color(white)!important;
+                }
+            }
+            
+            @include media-breakpoint-up(md){
+                min-height: 400px;
                 align-items: center;
+                display: flex;
+
+                h1{
+                    font-size: 2.2em;
+                }
+
+            .thumbnail{
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                right: 0;
+                top: 0;
+
+                img{
+                    width: 100%;
+                height: 100%;
+                object-fit: cover;
+                }
+            }
             }
         }
 
@@ -734,6 +766,17 @@
     }
 
     &.report{
+        footer{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            
+            a{
+                flex: 0 0 48%;
+                text-align: center;
+            }
+        }
+
         .thumbnail{
             position: relative;
             height: 0;
@@ -819,10 +862,13 @@
     @include media-breakpoint-up(md){
         margin-bottom: 0;
         display: flex;
+        flex-flow: column;
+        align-items: flex-start;
         height: 100%;
 
         .description{
             margin-top: 10px;
+            flex: 1;
         }
 
         .link{

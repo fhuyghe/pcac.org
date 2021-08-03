@@ -14,7 +14,7 @@ body{
         @include media-breakpoint-up(md){
             padding-top: $grid-gutter;
             padding-bottom: $grid-gutter;
-            margin-top: 150px;
+            margin-top: 140px;
         }
     }
 }
@@ -57,7 +57,7 @@ a{
     }
 }
 
-h1, h2, h3, h4{
+h2, h3, h4{
     font-family: 'Roboto Slab', serif;
 }
 
@@ -180,6 +180,28 @@ $councils: 'pcac', 'lirrcc', 'mnrcc', 'nyctrc';
         tr:first-child{
             background-color: theme-color($council)
         }
+    }
+
+    &.council-block{
+        .council-logo{
+            color: theme-color($council)!important;
+            
+            svg{
+                .circle{
+                    fill: theme-color($council)!important;
+                }
+            }
+        }
+
+        .button{
+            color: theme-color($council);
+            border-color: theme-color($council);
+
+            &:hover{
+                background-color: theme-color($council);
+                color: theme-color(white);
+            }
+        }   
     }
   }
 }

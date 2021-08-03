@@ -11,7 +11,6 @@
             @endif
         </div>
     </a>
-    <h4>{{ the_title() }}</h4>
     <footer>
         <a class="button" href="{{ the_permalink() }}">Info</a>
         @php $pdf = get_field('pdf_link') @endphp
@@ -19,5 +18,6 @@
         <a class="button" href="{{ $pdf }}" target="_blank">Full Report</a>
         @endif
     </footer>
+    <h4>{{ the_title() }}</h4>
 </div>
 </div>

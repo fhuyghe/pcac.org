@@ -5,11 +5,12 @@
         <div class="row">
             <div class="col-md-6">
                 <h1>{{ the_title() }}</h1>
-            </div>
-            <div class="col-md-6">
                 {!! $data['mission'] !!}
             </div>
         </div>
+    </div>
+    <div class="thumbnail">
+        {{ the_post_thumbnail('large') }}
     </div>
 </section>
 

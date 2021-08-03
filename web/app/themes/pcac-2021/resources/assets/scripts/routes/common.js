@@ -3,12 +3,23 @@ export default {
     // JavaScript to be fired on all pages
 
     //Open de mega menu
+    let timer;
     $('.menu-item.councils').on('mouseenter', function () {
       $('.nav-councils').addClass('active');
     })
     
+    $('.menu-item.councils').on('mouseleave', function () {
+      timer = setTimeout(function () {
+        $('.nav-councils').removeClass('active');
+      }, 50);
+    })
+    
+    $('.nav-councils').on('mouseenter', function () {
+      clearTimeout(timer);
+    })
+
     $('.nav-councils').on('mouseleave', function () {
-      $(this).removeClass('active');
+        $(this).removeClass('active');
     })
 
     // Small Menu when scrolled
