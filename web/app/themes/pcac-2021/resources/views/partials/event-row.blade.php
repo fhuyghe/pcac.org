@@ -12,13 +12,18 @@
     <td class="link">
     </td>
     <td class="info">
-        {!! $event->post_content !!}
-        
-        @php $links = get_field('links', $event->ID) @endphp
-        @if($links)
-        @foreach ($links as $link)
-            <a class="button" target="_blank" href="{{ $link['link_url'] }}">{{ $link['link_name'] }}</a>
-        @endforeach
-        @endif
+        <div class="row">
+            <div class="col-md-10">
+                {!! $event->post_content !!}
+            </div>
+            <div class="col-md-2">
+                @php $links = get_field('links', $event->ID) @endphp
+                @if($links)
+                @foreach ($links as $link)
+                <a class="button" target="_blank" href="{{ $link['link_url'] }}">{{ $link['link_name'] }}</a>
+                @endforeach
+                @endif
+            </div>
+        </div>
     </td>
 </tr>

@@ -283,6 +283,11 @@
             .button{
                 border-color: theme-color(white);
                 color: theme-color(white);
+                
+                &:hover{
+                    background-color: theme-color(white);
+                    color: theme-color(pcac);
+                }
             }
         }
 
@@ -600,6 +605,7 @@
                 margin-bottom: $grid-gutter;
 
                 .portrait{ 
+                    display: none;
                     height: 250px;
                     margin-bottom: 20px;
                     background: theme-color(grey);

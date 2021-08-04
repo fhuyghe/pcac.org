@@ -90,7 +90,7 @@
     }
     
     @include media-breakpoint-up(md){
-      padding: 10px $grid-gutter / 2;
+      padding: 5px $grid-gutter / 2;
 
       .announcement{
         display: block;
@@ -100,6 +100,10 @@
         a{
           display: inline-block;
           margin-left: 10px;
+
+          &:hover{
+            text-decoration: underline;
+          }
         }
       }
 
