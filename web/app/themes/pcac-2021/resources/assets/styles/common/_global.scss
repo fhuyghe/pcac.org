@@ -242,3 +242,10 @@ $councils: 'pcac', 'lirrcc', 'mnrcc', 'nyctrc';
 .tribe-events-promo{
     display: none;
 }
+
+//Ajax Load More
+.alm-load-more-btn{
+    &.done{
+        display: none;
+    }
+}

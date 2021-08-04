@@ -14,7 +14,7 @@
             'post_type' => 'post',
             'category' => 'meeting-minutes',
             'taxonomy' => 'council',
-            'taxonomy_terms' => get_post_field( 'post_name', $post->post_parent),
+            'taxonomy_terms' => $parent,
             'taxonomy_operator' => 'IN',
             'posts_per_page' => '6',
             'button_label' => 'More Meeting Minutes',
