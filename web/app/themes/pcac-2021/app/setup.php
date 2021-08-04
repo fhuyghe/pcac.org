@@ -157,6 +157,7 @@ function create_post_type_reports() {
         'menu_position' => 2,
         'menu_icon' => 'dashicons-clipboard',
         'rewrite' => array('slug' => 'report'),
+        'show_in_rest' => true,
         'supports' => array('title','editor','thumbnail', 'excerpt')
         )
     );
