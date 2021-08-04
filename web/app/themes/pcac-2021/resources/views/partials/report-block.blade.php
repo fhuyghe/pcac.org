@@ -13,7 +13,7 @@
     </a>
     <footer>
         <a class="button" href="{{ the_permalink() }}">Info</a>
-        @php $pdf = get_field('pdf_link') @endphp
+        @php $pdf = get_field('post_file') @endphp
         @if($pdf)
         <a class="button" href="{{ $pdf }}" target="_blank">Full Report</a>
         @endif
