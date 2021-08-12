@@ -20,7 +20,7 @@
             <div class="col-md-8">
                 @php the_content() @endphp
             </div>
-                <div class="col-md-2 offset-md-2">
+                <div class="col-md-3 offset-md-1">
                     @if($data['contact'])
                     <div class="contact">
                         <h4>Contact</h4>

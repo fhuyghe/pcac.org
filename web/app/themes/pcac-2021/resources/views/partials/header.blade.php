@@ -10,7 +10,7 @@
       @php $announcement = get_field('announcement', 'option'); @endphp
       @if ($announcement['active'])
           {{ $announcement['text'] }}
-          <a href="{{ $announcement['link'] }}" target="_blank">Read More</a>
+          <a href="{{ $announcement['link'] }}" target="_blank">{{ $announcement['button_text'] }}</a>
       @endif
     </div>
     <div class="hamburger-wrap">

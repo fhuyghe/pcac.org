@@ -21,7 +21,7 @@
             <div class="col-md-8">
                 @php the_content() @endphp
             </div>
-            <div class="col-md-2 offset-md-2">
+            <div class="col-md-3 offset-md-1">
                 <div class="info">
                     <h4>More Info</h4>
                     {!! $child_pages !!}
