@@ -15,8 +15,10 @@
                 <th></th>
             </tr>
         @if($events)
-        @foreach ($events as $event)
+        @foreach ($events as $post)
+            @php setup_postdata($post) @endphp
             @include('partials.event-row')
+            @php wp_reset_postdata() @endphp
         @endforeach
         @endif
         </table>
