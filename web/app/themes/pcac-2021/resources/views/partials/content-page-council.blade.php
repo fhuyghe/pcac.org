@@ -44,7 +44,7 @@
         <header>
         <h2>Latest Commentary</h2>
         <div>
-            <a class="button" href="/commentary">Read All</a>
+            <a class="button" href="/commentary/?council={{ the_title() }}">Read All</a>
         </div>
         </header>
         <div class="row">

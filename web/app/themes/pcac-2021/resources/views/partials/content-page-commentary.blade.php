@@ -20,6 +20,7 @@
             'target' => 'commentary_filter',
             'post_type' => 'post',
             'posts_per_page' => '6',
+            'category__not_in' => '112',
             'button_label' => 'More Posts',
             'button_loading_label' => 'Loading...',
             'placeholder' => 'true',

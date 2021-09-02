@@ -3,7 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 text">
-          <a href="/commentary"><i class="fal fa-arrow-left"></i> Back to All</a>
+          @if(in_category(112))
+            <a href="/{{ get_terms('council')[0]->slug }}/meeting-minutes/"><i class="fal fa-arrow-left"></i> Back to All</a>
+          @else
+            <a href="/commentary"><i class="fal fa-arrow-left"></i> Back to All</a>
+          @endif
           <h1 class="entry-title">{!! get_the_title() !!}</h1>
           @include('partials/entry-meta')
         </div>
