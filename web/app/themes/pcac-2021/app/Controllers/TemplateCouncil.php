@@ -61,6 +61,7 @@ class TemplateCouncil extends Controller
         $args = array(
             'post_type' => 'post',
 	    	'posts_per_page' => 3,
+            'cat' => '-112',
             'tax_query' => array(
                 array (
                     'taxonomy' => 'council',
