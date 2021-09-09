@@ -3,11 +3,18 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 text">
-          @if(get_the_terms($post, 'council')[0])
-            <a href="/{{ get_the_terms($post, 'council')[0]->slug }}/meeting-minutes/"><i class="fal fa-arrow-left"></i> Back to All</a>
-          @else
-            <a href="/commentary"><i class="fal fa-arrow-left"></i> Back to All</a>
-          @endif
+          @php
+          if(get_the_terms($post, 'council')):
+            if(sizeof(in_category(112)) > 0):
+              $link = '/' . get_the_terms($post, 'council')[0]->slug . '/meeting-minutes';
+            else:
+              $link = '/commentary/?council=' . get_the_terms($post, 'council')[0]->slug;
+            endif;
+          else:
+            $link = '/commentary';
+          endif;
+          @endphp
+          <a href="{{ $link }}"><i class="fal fa-arrow-left"></i> Back to All</a>
           <h1 class="entry-title">{!! get_the_title() !!}</h1>
           @include('partials/entry-meta')
         </div>
