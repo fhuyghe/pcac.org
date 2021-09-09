@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 text">
-          @if(in_category(112))
+          @if(get_the_terms($post, 'council')[0])
             <a href="/{{ get_the_terms($post, 'council')[0]->slug }}/meeting-minutes/"><i class="fal fa-arrow-left"></i> Back to All</a>
           @else
             <a href="/commentary"><i class="fal fa-arrow-left"></i> Back to All</a>
