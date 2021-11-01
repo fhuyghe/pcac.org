@@ -1,7 +1,7 @@
 <tr class="event">
     @php $start = strtotime(get_post_meta(get_the_ID(), '_EventStartDate')[0]) @endphp
     <td class="date">
-        {{ date("M j y", $start) }}
+        {{ date("M j", $start) }}
     </td>
     <td class="time">
         {{ date("g:i a", $start) }}
