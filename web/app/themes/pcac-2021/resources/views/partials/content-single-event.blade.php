@@ -26,25 +26,3 @@
             </div>
         </div>
     </section>
-
-    <section id="links">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    @php $previous_post = get_previous_post() @endphp
-                    {{ print_r($previous_post) }}
-                    @if( is_a( $previous_post , 'WP_Post' ) )
-                        <a href="<?php echo get_permalink( $previous_post->ID ); ?>"><?php echo get_the_title( $previous_post->ID ); ?></a>
-                    @endif
-                </div>
-                <div class="col-md-6">
-                    @php $next_post = get_next_post(TRUE, '', 'post_type') @endphp
-                    {{ print_r($next_post) }}
-                    @if( is_a( $next_post , 'WP_Post' ) )
-                        <a href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo get_the_title( $next_post->ID ); ?></a>
-                    @endif
-                    {{ next_post_link() }}
-                </div>
-            </div>
-        </div>
-    </section>

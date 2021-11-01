@@ -4,15 +4,12 @@
       <div class="row">
         <div class="col-md-6 text">
           @php
-          if(sizeof(get_the_terms($post, 'council')) > 0):
             if(in_category(112)):
               $link = '/' . get_the_terms($post, 'council')[0]->slug . '/meeting-minutes';
             else:
-              $link = '/commentary/?council=' . get_the_terms($post, 'council')[0]->slug;
+              $link = '/commentary';
+              //$link = '/commentary/?council=' . get_the_terms($post, 'council')[0]->slug;
             endif;
-          else:
-            $link = '/commentary';
-          endif;
           @endphp
           <a href="{{ $link }}"><i class="fal fa-arrow-left"></i> Back to All</a>
           <h1 class="entry-title">{!! get_the_title() !!}</h1>

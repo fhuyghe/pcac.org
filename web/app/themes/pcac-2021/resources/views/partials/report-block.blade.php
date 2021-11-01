@@ -1,7 +1,7 @@
 <div class="col-md-4">
 <div class="post-block report">
     <div class="date">
-        {{the_date('Y')}}
+        {{ get_the_date('Y')}}
     </div>
     <a href="{{ the_permalink() }}">
         <div class="thumbnail">
