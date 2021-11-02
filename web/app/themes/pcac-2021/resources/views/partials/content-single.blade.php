@@ -5,7 +5,12 @@
         <div class="col-md-6 text">
           @php
             if(in_category(112)):
-              $link = '/' . get_the_terms($post, 'council')[0]->slug . '/meeting-minutes';
+              $council = get_the_terms($post, 'council')[0]->slug;
+              if( $council == 'pcac'):
+                $link = '/about/meeting-minutes';
+              else:
+                $link = '/' . $council . '/meeting-minutes';
+              endif;
             else:
               $link = '/commentary';
               //$link = '/commentary/?council=' . get_the_terms($post, 'council')[0]->slug;

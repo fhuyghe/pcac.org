@@ -95,7 +95,7 @@
                     <div class="description">
                         {{ $data['events']['description'] }}
                     </div>
-                    <a class="button" href="/events">Calendar</a>
+                    <a class="button" href="/calendar">Calendar</a>
                 </div>
             </div>
         </header>
