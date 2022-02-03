@@ -26,7 +26,7 @@ if(!$category) {
             {{ $council }}
         </div>
         <div class="date">
-            {{ the_date() }}
+            {{ get_the_date('F j, Y') }}
         </div>
     </div>
     <a href="{{ the_permalink() }}">
