@@ -12,6 +12,16 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6512045-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-6512045-1');
+  </script>
+
   {{-- Font Awesome --}}
   <script src="https://kit.fontawesome.com/cffa4a15d8.js" crossorigin="anonymous"></script>
 </head>
