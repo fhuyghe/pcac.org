@@ -33,8 +33,8 @@ export default {
     });
 
     // Event Lists
-    $('.event-list').on('click', function (e) {
-      $(e.target).closest('.event').toggleClass('active');
+    $('.type-tribe_events').on('click', function (e) {
+      $(e.target).closest('.type-tribe_events').toggleClass('active');
     });
 
     //Hamburger

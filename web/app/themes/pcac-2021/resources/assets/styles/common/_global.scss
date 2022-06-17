@@ -243,6 +243,24 @@ $councils: 'pcac', 'lirrcc', 'mnrcc', 'nyctrc';
     display: none;
 }
 
+.tribe-events-list-separator-month{
+    background-color: transparent;
+    color: theme-color(purple);
+    font-size: 2em;
+}
+
+.type-tribe_events{
+    display: flex;
+    background-color: theme-color(grey);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 0;
+
+    .tribe-events-venue-details{
+        display: none;
+    }
+}
+
 //Ajax Load More
 .alm-load-more-btn{
     &.done{

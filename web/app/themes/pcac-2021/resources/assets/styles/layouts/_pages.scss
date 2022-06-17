@@ -899,6 +899,69 @@
 }
 
 // Events List
+#tribe-events-content .type-tribe_events{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 10px;
+    background: theme-color(white);
+    border-bottom: 10px solid theme-color(grey);
+
+    .date{
+        flex: 0 0 200px;
+        padding: 0 $grid-gutter / 2;
+        font-weight: 600;
+    }
+
+    .time{
+        flex: 0 0 200px;
+        padding: 0 $grid-gutter / 2;
+    }
+
+    .subject{
+        flex: 1;
+    }
+    
+    .link{
+        display: none;
+        color: theme-color(pcac);
+        cursor: pointer;
+        text-align: right;
+
+        &:after{
+            content: 'More Info';
+        }
+    }
+
+    &.active{
+        .link{
+            &:after{
+                content: 'Less Info';
+            }
+        }
+
+        .info{
+            display: block;
+        }
+    }
+    
+    .info{
+        display: none;
+        flex: 0 0 100%;
+        padding: 20px 20px 0;
+    }
+
+    @include media-breakpoint-up(md){
+        background: theme-color(grey);
+        border-bottom: 10px solid theme-color(white);
+        padding: 20px;
+
+        .link{
+            display: block;
+        }
+    }
+}
+
 .event-list{
     table{
         width: 100%;
@@ -932,6 +995,8 @@
             }
         }
     }
+
+    
 
     .event{
         flex-wrap: wrap;
