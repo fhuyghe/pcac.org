@@ -6,12 +6,15 @@
         {{ get_bloginfo('name') }}
       </div>
     </a>
-    <div class="announcement">
+    {{-- <div class="announcement">
       @php $announcement = get_field('announcement', 'option'); @endphp
       @if ($announcement['active'])
           {{ $announcement['text'] }}
           <a href="{{ $announcement['link'] }}" target="_blank">{{ $announcement['button_text'] }}</a>
       @endif
+    </div> --}}
+    <div class="newsletter">
+      @include('partials.mailchimp-form')
     </div>
     <div class="hamburger-wrap">
       <button class="hamburger hamburger--squeeze" type="button">

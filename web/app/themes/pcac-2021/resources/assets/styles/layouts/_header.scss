@@ -21,6 +21,7 @@
     .top-banner{
       background-color: theme-color(white); 
       
+      #mc_embed_signup,
       .announcement{
         display: none;
       }
@@ -85,6 +86,46 @@
 
         &:focus{
           outline: 0;
+        }
+      }
+    }
+
+    #mc_embed_signup{
+      display: none;
+      
+      @include media-breakpoint-up(md){
+        display: block;
+
+        #mc_embed_signup_scroll{
+          display: flex;
+        }
+
+        .mc-field-group{
+          padding-bottom: 0;
+          min-height: 0;
+
+          input{
+            padding: 2px 5px;
+            border-radius: 0;
+            border-right: 0px!important;
+            
+            &.mce_inline_error{
+              border-width: 1px!important;
+            }
+          }
+        }
+
+        #mc-embedded-subscribe{
+          background-color: theme-color(black);
+          margin-bottom: 0;
+          border-radius: 0;
+          height: 30px;
+          line-height: 0;
+        }
+
+        div.mce_inline_error,
+        #mce-responses{
+          display: none!important;
         }
       }
     }
