@@ -899,23 +899,25 @@
 }
 
 // Events List
+#tribe-events{
+    padding: 0;
+}
+
 #tribe-events-content .type-tribe_events{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 10px;
-    background: theme-color(white);
-    border-bottom: 10px solid theme-color(grey);
+    background: theme-color(grey);
+    border-bottom: 10px solid theme-color(white);
 
     .date{
-        flex: 0 0 200px;
-        padding: 0 $grid-gutter / 2;
+        padding: 0 10px;
         font-weight: 600;
     }
 
     .time{
-        flex: 0 0 200px;
-        padding: 0 $grid-gutter / 2;
+        padding: 0 10px;
     }
 
     .subject{
@@ -955,6 +957,16 @@
         background: theme-color(grey);
         border-bottom: 10px solid theme-color(white);
         padding: 20px;
+
+        .date{
+            flex: 0 0 200px;
+            padding: 0 20px;
+        }
+    
+        .time{
+            flex: 0 0 200px;
+            padding: 0 20px;
+        }
 
         .link{
             display: block;
