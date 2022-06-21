@@ -33,8 +33,14 @@ export default {
     });
 
     // Event Lists
+    $('.type-tribe_events a').attr('target', '_blank');
     $('.type-tribe_events').on('click', function (e) {
-      $(e.target).closest('.type-tribe_events').toggleClass('active');
+      console.log(e.target);
+      if (e.target.tagName.toLowerCase() === 'a') {
+        console.log('this is a link');
+      } else { 
+        $(e.target).closest('.type-tribe_events').toggleClass('active');
+      }
     });
 
     //Hamburger
