@@ -33,13 +33,13 @@ export default {
     });
 
     // Event Lists
-    $('.type-tribe_events a').attr('target', '_blank');
-    $('.type-tribe_events').on('click', function (e) {
-      console.log(e.target);
+    $('.event-list a, .type-tribe_events a').attr('target', '_blank');
+    $('.event-list, .type-tribe_events').on('click', function (e) {
       if (e.target.tagName.toLowerCase() === 'a') {
         console.log('this is a link');
       } else { 
         $(e.target).closest('.type-tribe_events').toggleClass('active');
+        $(e.target).closest('.event').toggleClass('active');
       }
     });
 
